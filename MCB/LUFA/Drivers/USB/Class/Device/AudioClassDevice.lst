@@ -615,16 +615,16 @@
  668               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 AudioClassDevice.c
-     /tmp/cc5a9uPQ.s:2      *ABS*:0000003f __SREG__
-     /tmp/cc5a9uPQ.s:3      *ABS*:0000003e __SP_H__
-     /tmp/cc5a9uPQ.s:4      *ABS*:0000003d __SP_L__
-     /tmp/cc5a9uPQ.s:5      *ABS*:00000034 __CCP__
-     /tmp/cc5a9uPQ.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/cc5a9uPQ.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/cc5a9uPQ.s:19     .text.Audio_Device_Event_Stub:00000000 Audio_Device_Event_Stub
-     /tmp/cc5a9uPQ.s:32     .text.Audio_Device_ConfigureEndpoints:00000000 Audio_Device_ConfigureEndpoints
-     /tmp/cc5a9uPQ.s:136    .text.Audio_Device_ProcessControlRequest:00000000 Audio_Device_ProcessControlRequest
-     /tmp/cc5a9uPQ.s:19     .text.Audio_Device_Event_Stub:00000000 EVENT_Audio_Device_StreamStartStop
+     /tmp/ccJKiWR0.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccJKiWR0.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccJKiWR0.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccJKiWR0.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccJKiWR0.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccJKiWR0.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccJKiWR0.s:19     .text.Audio_Device_Event_Stub:00000000 Audio_Device_Event_Stub
+     /tmp/ccJKiWR0.s:32     .text.Audio_Device_ConfigureEndpoints:00000000 Audio_Device_ConfigureEndpoints
+     /tmp/ccJKiWR0.s:136    .text.Audio_Device_ProcessControlRequest:00000000 Audio_Device_ProcessControlRequest
+     /tmp/ccJKiWR0.s:19     .text.Audio_Device_Event_Stub:00000000 EVENT_Audio_Device_StreamStartStop
 
 UNDEFINED SYMBOLS
 Endpoint_ConfigureEndpoint_Prv

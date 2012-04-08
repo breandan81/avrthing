@@ -9,11 +9,11 @@
   16               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 RNDISClassHost.c
-     /tmp/ccuXbbPl.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccuXbbPl.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccuXbbPl.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccuXbbPl.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccuXbbPl.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccuXbbPl.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccOLRv8r.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccOLRv8r.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccOLRv8r.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccOLRv8r.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccOLRv8r.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccOLRv8r.s:7      *ABS*:00000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

@@ -9,11 +9,11 @@
   16               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 CDCClassHost.c
-     /tmp/ccTy0Aza.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccTy0Aza.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccTy0Aza.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccTy0Aza.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccTy0Aza.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccTy0Aza.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccWpRegq.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccWpRegq.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccWpRegq.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccWpRegq.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccWpRegq.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccWpRegq.s:7      *ABS*:00000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

@@ -1220,32 +1220,32 @@
  1405               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 CDCClassDevice.c
-     /tmp/ccRwJ0JR.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccRwJ0JR.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccRwJ0JR.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccRwJ0JR.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccRwJ0JR.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccRwJ0JR.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/ccRwJ0JR.s:19     .text.CDC_Device_BytesReceived:00000000 CDC_Device_BytesReceived
-     /tmp/ccRwJ0JR.s:109    .text.CDC_Device_ReceiveByte:00000000 CDC_Device_ReceiveByte
-     /tmp/ccRwJ0JR.s:220    .text.CDC_Device_CreateStream:00000000 CDC_Device_CreateStream
-     /tmp/ccRwJ0JR.s:737    .text.CDC_Device_putchar:00000000 CDC_Device_putchar
-     /tmp/ccRwJ0JR.s:287    .text.CDC_Device_getchar:00000000 CDC_Device_getchar
-     /tmp/ccRwJ0JR.s:254    .text.CDC_Device_CreateBlockingStream:00000000 CDC_Device_CreateBlockingStream
-     /tmp/ccRwJ0JR.s:603    .text.CDC_Device_getchar_Blocking:00000000 CDC_Device_getchar_Blocking
-     /tmp/ccRwJ0JR.s:319    .text.CDC_Device_Event_Stub:00000000 CDC_Device_Event_Stub
-     /tmp/ccRwJ0JR.s:332    .text.CDC_Device_SendControlLineStateChange:00000000 CDC_Device_SendControlLineStateChange
-     /tmp/ccRwJ0JR.s:1249   .data:00000000 C.21.4136
-     /tmp/ccRwJ0JR.s:428    .text.CDC_Device_SendData:00000000 CDC_Device_SendData
-     /tmp/ccRwJ0JR.s:476    .text.CDC_Device_Flush:00000000 CDC_Device_Flush
-     /tmp/ccRwJ0JR.s:573    .text.CDC_Device_USBTask:00000000 CDC_Device_USBTask
-     /tmp/ccRwJ0JR.s:655    .text.CDC_Device_SendByte:00000000 CDC_Device_SendByte
-     /tmp/ccRwJ0JR.s:771    .text.CDC_Device_SendString:00000000 CDC_Device_SendString
-     /tmp/ccRwJ0JR.s:825    .text.CDC_Device_ConfigureEndpoints:00000000 CDC_Device_ConfigureEndpoints
-     /tmp/ccRwJ0JR.s:982    .text.CDC_Device_ProcessControlRequest:00000000 CDC_Device_ProcessControlRequest
-     /tmp/ccRwJ0JR.s:319    .text.CDC_Device_Event_Stub:00000000 EVENT_CDC_Device_LineEncodingChanged
-     /tmp/ccRwJ0JR.s:319    .text.CDC_Device_Event_Stub:00000000 EVENT_CDC_Device_ControLineStateChanged
-     /tmp/ccRwJ0JR.s:319    .text.CDC_Device_Event_Stub:00000000 EVENT_CDC_Device_BreakSent
+     /tmp/ccq5kELa.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccq5kELa.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccq5kELa.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccq5kELa.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccq5kELa.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccq5kELa.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccq5kELa.s:19     .text.CDC_Device_BytesReceived:00000000 CDC_Device_BytesReceived
+     /tmp/ccq5kELa.s:109    .text.CDC_Device_ReceiveByte:00000000 CDC_Device_ReceiveByte
+     /tmp/ccq5kELa.s:220    .text.CDC_Device_CreateStream:00000000 CDC_Device_CreateStream
+     /tmp/ccq5kELa.s:737    .text.CDC_Device_putchar:00000000 CDC_Device_putchar
+     /tmp/ccq5kELa.s:287    .text.CDC_Device_getchar:00000000 CDC_Device_getchar
+     /tmp/ccq5kELa.s:254    .text.CDC_Device_CreateBlockingStream:00000000 CDC_Device_CreateBlockingStream
+     /tmp/ccq5kELa.s:603    .text.CDC_Device_getchar_Blocking:00000000 CDC_Device_getchar_Blocking
+     /tmp/ccq5kELa.s:319    .text.CDC_Device_Event_Stub:00000000 CDC_Device_Event_Stub
+     /tmp/ccq5kELa.s:332    .text.CDC_Device_SendControlLineStateChange:00000000 CDC_Device_SendControlLineStateChange
+     /tmp/ccq5kELa.s:1249   .data:00000000 C.21.4136
+     /tmp/ccq5kELa.s:428    .text.CDC_Device_SendData:00000000 CDC_Device_SendData
+     /tmp/ccq5kELa.s:476    .text.CDC_Device_Flush:00000000 CDC_Device_Flush
+     /tmp/ccq5kELa.s:573    .text.CDC_Device_USBTask:00000000 CDC_Device_USBTask
+     /tmp/ccq5kELa.s:655    .text.CDC_Device_SendByte:00000000 CDC_Device_SendByte
+     /tmp/ccq5kELa.s:771    .text.CDC_Device_SendString:00000000 CDC_Device_SendString
+     /tmp/ccq5kELa.s:825    .text.CDC_Device_ConfigureEndpoints:00000000 CDC_Device_ConfigureEndpoints
+     /tmp/ccq5kELa.s:982    .text.CDC_Device_ProcessControlRequest:00000000 CDC_Device_ProcessControlRequest
+     /tmp/ccq5kELa.s:319    .text.CDC_Device_Event_Stub:00000000 EVENT_CDC_Device_LineEncodingChanged
+     /tmp/ccq5kELa.s:319    .text.CDC_Device_Event_Stub:00000000 EVENT_CDC_Device_ControLineStateChanged
+     /tmp/ccq5kELa.s:319    .text.CDC_Device_Event_Stub:00000000 EVENT_CDC_Device_BreakSent
 
 UNDEFINED SYMBOLS
 USB_DeviceState

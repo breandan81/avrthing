@@ -397,15 +397,15 @@
  450               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 USBInterrupt_AVR8.c
-     /tmp/ccnBFdTu.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccnBFdTu.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccnBFdTu.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccnBFdTu.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccnBFdTu.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccnBFdTu.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/ccnBFdTu.s:19     .text.USB_INT_DisableAllInterrupts:00000000 USB_INT_DisableAllInterrupts
-     /tmp/ccnBFdTu.s:40     .text.USB_INT_ClearAllInterrupts:00000000 USB_INT_ClearAllInterrupts
-     /tmp/ccnBFdTu.s:57     .text.__vector_10:00000000 __vector_10
+     /tmp/cc51VmaT.s:2      *ABS*:0000003f __SREG__
+     /tmp/cc51VmaT.s:3      *ABS*:0000003e __SP_H__
+     /tmp/cc51VmaT.s:4      *ABS*:0000003d __SP_L__
+     /tmp/cc51VmaT.s:5      *ABS*:00000034 __CCP__
+     /tmp/cc51VmaT.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/cc51VmaT.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/cc51VmaT.s:19     .text.USB_INT_DisableAllInterrupts:00000000 USB_INT_DisableAllInterrupts
+     /tmp/cc51VmaT.s:40     .text.USB_INT_ClearAllInterrupts:00000000 USB_INT_ClearAllInterrupts
+     /tmp/cc51VmaT.s:57     .text.__vector_10:00000000 __vector_10
 
 UNDEFINED SYMBOLS
 EVENT_USB_Device_StartOfFrame

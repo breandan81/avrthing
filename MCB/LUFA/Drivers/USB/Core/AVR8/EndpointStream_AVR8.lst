@@ -3712,34 +3712,34 @@
  3955               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 EndpointStream_AVR8.c
-     /tmp/ccnlHuWJ.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccnlHuWJ.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccnlHuWJ.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccnlHuWJ.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccnlHuWJ.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccnlHuWJ.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/ccnlHuWJ.s:19     .text.Endpoint_Write_Control_Stream_LE:00000000 Endpoint_Write_Control_Stream_LE
-     /tmp/ccnlHuWJ.s:218    .text.Endpoint_Write_Control_Stream_BE:00000000 Endpoint_Write_Control_Stream_BE
-     /tmp/ccnlHuWJ.s:424    .text.Endpoint_Read_Control_Stream_LE:00000000 Endpoint_Read_Control_Stream_LE
-     /tmp/ccnlHuWJ.s:575    .text.Endpoint_Read_Control_Stream_BE:00000000 Endpoint_Read_Control_Stream_BE
-     /tmp/ccnlHuWJ.s:739    .text.Endpoint_Write_Control_PStream_LE:00000000 Endpoint_Write_Control_PStream_LE
-     /tmp/ccnlHuWJ.s:949    .text.Endpoint_Write_Control_PStream_BE:00000000 Endpoint_Write_Control_PStream_BE
-     /tmp/ccnlHuWJ.s:1165   .text.Endpoint_Read_Control_EStream_BE:00000000 Endpoint_Read_Control_EStream_BE
-     /tmp/ccnlHuWJ.s:1351   .text.Endpoint_Read_Control_EStream_LE:00000000 Endpoint_Read_Control_EStream_LE
-     /tmp/ccnlHuWJ.s:1523   .text.Endpoint_Write_Control_EStream_BE:00000000 Endpoint_Write_Control_EStream_BE
-     /tmp/ccnlHuWJ.s:1757   .text.Endpoint_Write_Control_EStream_LE:00000000 Endpoint_Write_Control_EStream_LE
-     /tmp/ccnlHuWJ.s:1982   .text.Endpoint_Null_Stream:00000000 Endpoint_Null_Stream
-     /tmp/ccnlHuWJ.s:2106   .text.Endpoint_Discard_Stream:00000000 Endpoint_Discard_Stream
-     /tmp/ccnlHuWJ.s:2234   .text.Endpoint_Read_EStream_BE:00000000 Endpoint_Read_EStream_BE
-     /tmp/ccnlHuWJ.s:2381   .text.Endpoint_Read_EStream_LE:00000000 Endpoint_Read_EStream_LE
-     /tmp/ccnlHuWJ.s:2538   .text.Endpoint_Write_EStream_BE:00000000 Endpoint_Write_EStream_BE
-     /tmp/ccnlHuWJ.s:2685   .text.Endpoint_Write_EStream_LE:00000000 Endpoint_Write_EStream_LE
-     /tmp/ccnlHuWJ.s:2842   .text.Endpoint_Write_PStream_BE:00000000 Endpoint_Write_PStream_BE
-     /tmp/ccnlHuWJ.s:3000   .text.Endpoint_Write_PStream_LE:00000000 Endpoint_Write_PStream_LE
-     /tmp/ccnlHuWJ.s:3166   .text.Endpoint_Read_Stream_BE:00000000 Endpoint_Read_Stream_BE
-     /tmp/ccnlHuWJ.s:3313   .text.Endpoint_Read_Stream_LE:00000000 Endpoint_Read_Stream_LE
-     /tmp/ccnlHuWJ.s:3466   .text.Endpoint_Write_Stream_BE:00000000 Endpoint_Write_Stream_BE
-     /tmp/ccnlHuWJ.s:3613   .text.Endpoint_Write_Stream_LE:00000000 Endpoint_Write_Stream_LE
+     /tmp/ccElLTx1.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccElLTx1.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccElLTx1.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccElLTx1.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccElLTx1.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccElLTx1.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccElLTx1.s:19     .text.Endpoint_Write_Control_Stream_LE:00000000 Endpoint_Write_Control_Stream_LE
+     /tmp/ccElLTx1.s:218    .text.Endpoint_Write_Control_Stream_BE:00000000 Endpoint_Write_Control_Stream_BE
+     /tmp/ccElLTx1.s:424    .text.Endpoint_Read_Control_Stream_LE:00000000 Endpoint_Read_Control_Stream_LE
+     /tmp/ccElLTx1.s:575    .text.Endpoint_Read_Control_Stream_BE:00000000 Endpoint_Read_Control_Stream_BE
+     /tmp/ccElLTx1.s:739    .text.Endpoint_Write_Control_PStream_LE:00000000 Endpoint_Write_Control_PStream_LE
+     /tmp/ccElLTx1.s:949    .text.Endpoint_Write_Control_PStream_BE:00000000 Endpoint_Write_Control_PStream_BE
+     /tmp/ccElLTx1.s:1165   .text.Endpoint_Read_Control_EStream_BE:00000000 Endpoint_Read_Control_EStream_BE
+     /tmp/ccElLTx1.s:1351   .text.Endpoint_Read_Control_EStream_LE:00000000 Endpoint_Read_Control_EStream_LE
+     /tmp/ccElLTx1.s:1523   .text.Endpoint_Write_Control_EStream_BE:00000000 Endpoint_Write_Control_EStream_BE
+     /tmp/ccElLTx1.s:1757   .text.Endpoint_Write_Control_EStream_LE:00000000 Endpoint_Write_Control_EStream_LE
+     /tmp/ccElLTx1.s:1982   .text.Endpoint_Null_Stream:00000000 Endpoint_Null_Stream
+     /tmp/ccElLTx1.s:2106   .text.Endpoint_Discard_Stream:00000000 Endpoint_Discard_Stream
+     /tmp/ccElLTx1.s:2234   .text.Endpoint_Read_EStream_BE:00000000 Endpoint_Read_EStream_BE
+     /tmp/ccElLTx1.s:2381   .text.Endpoint_Read_EStream_LE:00000000 Endpoint_Read_EStream_LE
+     /tmp/ccElLTx1.s:2538   .text.Endpoint_Write_EStream_BE:00000000 Endpoint_Write_EStream_BE
+     /tmp/ccElLTx1.s:2685   .text.Endpoint_Write_EStream_LE:00000000 Endpoint_Write_EStream_LE
+     /tmp/ccElLTx1.s:2842   .text.Endpoint_Write_PStream_BE:00000000 Endpoint_Write_PStream_BE
+     /tmp/ccElLTx1.s:3000   .text.Endpoint_Write_PStream_LE:00000000 Endpoint_Write_PStream_LE
+     /tmp/ccElLTx1.s:3166   .text.Endpoint_Read_Stream_BE:00000000 Endpoint_Read_Stream_BE
+     /tmp/ccElLTx1.s:3313   .text.Endpoint_Read_Stream_LE:00000000 Endpoint_Read_Stream_LE
+     /tmp/ccElLTx1.s:3466   .text.Endpoint_Write_Stream_BE:00000000 Endpoint_Write_Stream_BE
+     /tmp/ccElLTx1.s:3613   .text.Endpoint_Write_Stream_LE:00000000 Endpoint_Write_Stream_LE
 
 UNDEFINED SYMBOLS
 USB_ControlRequest

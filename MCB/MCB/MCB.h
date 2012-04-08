@@ -36,24 +36,14 @@
 #ifndef _MCB_H_
 #define _MCB_H_
 
-	/* Includes: */
-		#include <avr/io.h>
-		#include <avr/wdt.h>
-		#include <avr/power.h>
-		#include <avr/interrupt.h>
-		#include <string.h>
-		#include <stdio.h>
 
-		#include "Descriptors.h"
-
-		#include <LUFA/Version.h>
-		#include <LUFA/Drivers/USB/USB.h>
 
 	
 //defines 
 	
 	#define MHZ 16 //change this if using a different clock speed obviously
 	/* Function Prototypes: */
+		void initMCB(void);
 		void SetupHardware(void);
 
 		void EVENT_USB_Device_Connect(void);

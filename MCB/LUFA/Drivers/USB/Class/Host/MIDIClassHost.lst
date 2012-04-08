@@ -9,11 +9,11 @@
   16               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 MIDIClassHost.c
-     /tmp/ccmN2Blh.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccmN2Blh.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccmN2Blh.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccmN2Blh.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccmN2Blh.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccmN2Blh.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccVA2njl.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccVA2njl.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccVA2njl.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccVA2njl.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccVA2njl.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccVA2njl.s:7      *ABS*:00000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

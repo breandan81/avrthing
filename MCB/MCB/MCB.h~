@@ -49,13 +49,12 @@
 		#include <LUFA/Version.h>
 		#include <LUFA/Drivers/USB/USB.h>
 
-//globals
-	unsigned int halfMillis = 0;
 	
 //defines 
 	
 	#define MHZ 16 //change this if using a different clock speed obviously
 	/* Function Prototypes: */
+		void initMCB(void);
 		void SetupHardware(void);
 
 		void EVENT_USB_Device_Connect(void);
@@ -64,10 +63,10 @@
 		void EVENT_USB_Device_ControlRequest(void);
 		
 		int micros(void );
-int millis(void );
-int seconds(void );
-int minutes(void );
-int hours(void );
+		int millis(void );
+		int seconds(void );
+		int minutes(void );
+		int hours(void );
 
 #endif
 
