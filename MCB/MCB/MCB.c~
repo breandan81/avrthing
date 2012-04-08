@@ -35,7 +35,7 @@
  */
 
 #include "MCB.h"
-
+#include "RTC.h"
 
 /** LUFA CDC Class driver interface configuration and state information. This structure is
  *  passed to all CDC Class driver functions, so that multiple instances of the same class
@@ -96,10 +96,10 @@ int main(void)
 	{
 
 		/* Must throw away unused bytes from the host, or it will lock up while waiting for the device */
-//		CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
+		CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
 
-//		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
-//		USB_USBTask();
+		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
+		USB_USBTask();
 		printf("%d", millis());
 		i++;
 	}
@@ -137,33 +137,5 @@ void EVENT_USB_Device_ConfigurationChanged(void)
 void EVENT_USB_Device_ControlRequest(void)
 {
 	CDC_Device_ProcessControlRequest(&VirtualSerial_CDC_Interface);
-}
-
-
-void initRTC()
-{
-
-	TCCR1B |= _BV(WGM12); //set WGM12, will make OCR1A TOP for timer1	
-	OCR1A = MHZ*500;//half a ms 
-	
-	TCCR1B |= _BV(CS10); //clock source no prescaling
-	TIMSK1 |= _BV(OCIE1A);//output compare match interrupt enabled
-	
-	sei();
-}
-
-ISR(TIMER1_COMPA_vect)
-{
-	CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
-        CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
-        USB_USBTask();
-
-	halfMillis++; 
-}
-
-
-int millis()
-{
-	return halfMillis >> 1;
 }
 
