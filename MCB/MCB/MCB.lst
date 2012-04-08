@@ -1,0 +1,187 @@
+   1               		.file	"MCB.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.EVENT_USB_Device_Disconnect,"ax",@progbits
+  17               	.global	EVENT_USB_Device_Disconnect
+  19               	EVENT_USB_Device_Disconnect:
+  20               	.LFB103:
+  21               	.LSM0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	/* epilogue start */
+  25               	.LSM1:
+  26 0000 0895      		ret
+  27               	.LFE103:
+  29               		.section	.text.EVENT_USB_Device_ControlRequest,"ax",@progbits
+  30               	.global	EVENT_USB_Device_ControlRequest
+  32               	EVENT_USB_Device_ControlRequest:
+  33               	.LFB105:
+  34               	.LSM2:
+  35               	/* prologue: function */
+  36               	/* frame size = 0 */
+  37               	.LSM3:
+  38 0000 80E0      		ldi r24,lo8(VirtualSerial_CDC_Interface)
+  39 0002 90E0      		ldi r25,hi8(VirtualSerial_CDC_Interface)
+  40 0004 0E94 0000 		call CDC_Device_ProcessControlRequest
+  41               	/* epilogue start */
+  42               	.LSM4:
+  43 0008 0895      		ret
+  44               	.LFE105:
+  46               		.section	.text.EVENT_USB_Device_ConfigurationChanged,"ax",@progbits
+  47               	.global	EVENT_USB_Device_ConfigurationChanged
+  49               	EVENT_USB_Device_ConfigurationChanged:
+  50               	.LFB104:
+  51               	.LSM5:
+  52               	/* prologue: function */
+  53               	/* frame size = 0 */
+  54               	.LSM6:
+  55 0000 80E0      		ldi r24,lo8(VirtualSerial_CDC_Interface)
+  56 0002 90E0      		ldi r25,hi8(VirtualSerial_CDC_Interface)
+  57 0004 0E94 0000 		call CDC_Device_ConfigureEndpoints
+  58               	/* epilogue start */
+  59               	.LSM7:
+  60 0008 0895      		ret
+  61               	.LFE104:
+  63               		.section	.text.SetupHardware,"ax",@progbits
+  64               	.global	SetupHardware
+  66               	SetupHardware:
+  67               	.LFB102:
+  68               	.LSM8:
+  69               	/* prologue: function */
+  70               	/* frame size = 0 */
+  71               	.LSM9:
+  72 0000 84B7      		in r24,84-32
+  73 0002 877F      		andi r24,lo8(-9)
+  74 0004 84BF      		out 84-32,r24
+  75               	.LSM10:
+  76 0006 88E1      		ldi r24,lo8(24)
+  77               	/* #APP */
+  78               	 ;  104 "MCB.c" 1
+  79 0008 0FB6      		in __tmp_reg__, __SREG__
+  80 000a F894      		cli
+  81 000c 8093 6000 		sts 96, r24
+  82 0010 1092 6000 		sts 96, __zero_reg__
+  83 0014 0FBE      		out __SREG__,__tmp_reg__
+  84               		
+  85               	 ;  0 "" 2
+  86               	/* #NOAPP */
+  87               	.LBB4:
+  88               	.LBB5:
+  89               	.LSM11:
+  90 0016 90E0      		ldi r25,lo8(0)
+  91 0018 80E8      		ldi r24,lo8(-128)
+  92               	/* #APP */
+  93               	 ;  1394 "/usr/lib/gcc/avr/4.3.5/../../../avr/include/avr/power.h" 1
+  94 001a 0FB6      		in __tmp_reg__,__SREG__
+  95 001c F894      		cli
+  96 001e 8093 6100 		sts 97, r24
+  97 0022 9093 6100 		sts 97, r25
+  98 0026 0FBE      		out __SREG__, __tmp_reg__
+  99               	 ;  0 "" 2
+ 100               	/* #NOAPP */
+ 101               	.LBE5:
+ 102               	.LBE4:
+ 103               	.LSM12:
+ 104 0028 0E94 0000 		call USB_Init
+ 105               	/* epilogue start */
+ 106               	.LSM13:
+ 107 002c 0895      		ret
+ 108               	.LFE102:
+ 110               		.data
+ 111               	.LC0:
+ 112 0000 4865 6C6C 		.string	"Hello World!\n\r"
+ 112      6F20 576F 
+ 112      726C 6421 
+ 112      0A0D 00
+ 113               		.section	.text.main,"ax",@progbits
+ 114               	.global	main
+ 116               	main:
+ 117               	.LFB101:
+ 118               	.LSM14:
+ 119               	/* prologue: function */
+ 120               	/* frame size = 0 */
+ 121               	.LSM15:
+ 122 0000 0E94 0000 		call SetupHardware
+ 123               	.LSM16:
+ 124 0004 80E0      		ldi r24,lo8(VirtualSerial_CDC_Interface)
+ 125 0006 90E0      		ldi r25,hi8(VirtualSerial_CDC_Interface)
+ 126 0008 60E0      		ldi r22,lo8(USBSerialStream)
+ 127 000a 70E0      		ldi r23,hi8(USBSerialStream)
+ 128 000c 0E94 0000 		call CDC_Device_CreateBlockingStream
+ 129               	.LSM17:
+ 130               	/* #APP */
+ 131               	 ;  81 "MCB.c" 1
+ 132 0010 7894      		sei
+ 133               	 ;  0 "" 2
+ 134               	.LSM18:
+ 135               	/* #NOAPP */
+ 136 0012 80E0      		ldi r24,lo8(USBSerialStream)
+ 137 0014 90E0      		ldi r25,hi8(USBSerialStream)
+ 138 0016 9093 0000 		sts (__iob+2)+1,r25
+ 139 001a 8093 0000 		sts __iob+2,r24
+ 140               	.LSM19:
+ 141 001e 9093 0000 		sts (__iob)+1,r25
+ 142 0022 8093 0000 		sts __iob,r24
+ 143               	.L10:
+ 144               	.LSM20:
+ 145 0026 80E0      		ldi r24,lo8(VirtualSerial_CDC_Interface)
+ 146 0028 90E0      		ldi r25,hi8(VirtualSerial_CDC_Interface)
+ 147 002a 0E94 0000 		call CDC_Device_USBTask
+ 148               	.LSM21:
+ 149 002e 0E94 0000 		call USB_USBTask
+ 150               	.LSM22:
+ 151 0032 80E0      		ldi r24,lo8(.LC0)
+ 152 0034 90E0      		ldi r25,hi8(.LC0)
+ 153 0036 0E94 0000 		call puts
+ 154 003a 00C0      		rjmp .L10
+ 155               	.LFE101:
+ 157               	.global	VirtualSerial_CDC_Interface
+ 158               		.data
+ 161               	VirtualSerial_CDC_Interface:
+ 162 000f 00        		.byte	0
+ 163 0010 03        		.byte	3
+ 164 0011 1000      		.word	16
+ 165 0013 00        		.byte	0
+ 166 0014 04        		.byte	4
+ 167 0015 1000      		.word	16
+ 168 0017 00        		.byte	0
+ 169 0018 02        		.byte	2
+ 170 0019 0800      		.word	8
+ 171 001b 00        		.byte	0
+ 172 001c 0000 0000 		.skip 11,0
+ 172      0000 0000 
+ 172      0000 00
+ 173               		.lcomm USBSerialStream,14
+ 230               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 MCB.c
+     /tmp/cckHf528.s:2      *ABS*:0000003f __SREG__
+     /tmp/cckHf528.s:3      *ABS*:0000003e __SP_H__
+     /tmp/cckHf528.s:4      *ABS*:0000003d __SP_L__
+     /tmp/cckHf528.s:5      *ABS*:00000034 __CCP__
+     /tmp/cckHf528.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/cckHf528.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/cckHf528.s:19     .text.EVENT_USB_Device_Disconnect:00000000 EVENT_USB_Device_Disconnect
+     /tmp/cckHf528.s:32     .text.EVENT_USB_Device_ControlRequest:00000000 EVENT_USB_Device_ControlRequest
+     /tmp/cckHf528.s:161    .data:0000000f VirtualSerial_CDC_Interface
+     /tmp/cckHf528.s:49     .text.EVENT_USB_Device_ConfigurationChanged:00000000 EVENT_USB_Device_ConfigurationChanged
+     /tmp/cckHf528.s:66     .text.SetupHardware:00000000 SetupHardware
+     /tmp/cckHf528.s:116    .text.main:00000000 main
+                             .bss:00000000 USBSerialStream
+
+UNDEFINED SYMBOLS
+CDC_Device_ProcessControlRequest
+CDC_Device_ConfigureEndpoints
+USB_Init
+CDC_Device_CreateBlockingStream
+__iob
+CDC_Device_USBTask
+USB_USBTask
+puts
+__do_copy_data
+__do_clear_bss
