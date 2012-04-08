@@ -1,4 +1,4 @@
-MCB.o: MCB.c MCB.h Descriptors.h ../LUFA/Drivers/USB/USB.h \
+MCB.o: MCB.cpp MCB.h Descriptors.h ../LUFA/Drivers/USB/USB.h \
   ../LUFA/Drivers/USB/../../Common/Common.h \
   ../LUFA/Drivers/USB/../../Common/Architectures.h \
   ../LUFA/Drivers/USB/../../Common/BoardTypes.h \
@@ -83,7 +83,7 @@ MCB.o: MCB.c MCB.h Descriptors.h ../LUFA/Drivers/USB/USB.h \
   ../LUFA/Drivers/USB/Class/Device/RNDISClassDevice.h \
   ../LUFA/Drivers/USB/Class/Device/../Common/RNDISClassCommon.h \
   ../LUFA/Drivers/USB/Class/Device/../Common/CDCClassCommon.h \
-  ../LUFA/Drivers/USB/Class/StillImageClass.h ../LUFA/Version.h
+  ../LUFA/Drivers/USB/Class/StillImageClass.h ../LUFA/Version.h user.h
 
 MCB.h:
 
@@ -266,3 +266,5 @@ Descriptors.h:
 ../LUFA/Drivers/USB/Class/StillImageClass.h:
 
 ../LUFA/Version.h:
+
+user.h:

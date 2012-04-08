@@ -49,8 +49,6 @@
 		#include <LUFA/Version.h>
 		#include <LUFA/Drivers/USB/USB.h>
 
-//globals
-	unsigned int halfMillis = 0;
 	
 //defines 
 	

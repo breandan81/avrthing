@@ -808,15 +808,15 @@
  861               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 HIDClassDevice.c
-     /tmp/cclleVbZ.s:2      *ABS*:0000003f __SREG__
-     /tmp/cclleVbZ.s:3      *ABS*:0000003e __SP_H__
-     /tmp/cclleVbZ.s:4      *ABS*:0000003d __SP_L__
-     /tmp/cclleVbZ.s:5      *ABS*:00000034 __CCP__
-     /tmp/cclleVbZ.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/cclleVbZ.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/cclleVbZ.s:19     .text.HID_Device_USBTask:00000000 HID_Device_USBTask
-     /tmp/cclleVbZ.s:305    .text.HID_Device_ConfigureEndpoints:00000000 HID_Device_ConfigureEndpoints
-     /tmp/cclleVbZ.s:400    .text.HID_Device_ProcessControlRequest:00000000 HID_Device_ProcessControlRequest
+     /tmp/ccoFQNUf.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccoFQNUf.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccoFQNUf.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccoFQNUf.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccoFQNUf.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccoFQNUf.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccoFQNUf.s:19     .text.HID_Device_USBTask:00000000 HID_Device_USBTask
+     /tmp/ccoFQNUf.s:305    .text.HID_Device_ConfigureEndpoints:00000000 HID_Device_ConfigureEndpoints
+     /tmp/ccoFQNUf.s:400    .text.HID_Device_ProcessControlRequest:00000000 HID_Device_ProcessControlRequest
 
 UNDEFINED SYMBOLS
 USB_DeviceState

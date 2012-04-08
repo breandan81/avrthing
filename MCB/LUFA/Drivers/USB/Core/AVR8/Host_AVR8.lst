@@ -9,11 +9,11 @@
   16               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 Host_AVR8.c
-     /tmp/ccEeIpGc.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccEeIpGc.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccEeIpGc.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccEeIpGc.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccEeIpGc.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccEeIpGc.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccGpOH0l.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccGpOH0l.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccGpOH0l.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccGpOH0l.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccGpOH0l.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccGpOH0l.s:7      *ABS*:00000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

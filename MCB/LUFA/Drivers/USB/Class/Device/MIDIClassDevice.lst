@@ -342,17 +342,17 @@
  415               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 MIDIClassDevice.c
-     /tmp/ccvIsmyo.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccvIsmyo.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccvIsmyo.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccvIsmyo.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccvIsmyo.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccvIsmyo.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/ccvIsmyo.s:19     .text.MIDI_Device_ReceiveEventPacket:00000000 MIDI_Device_ReceiveEventPacket
-     /tmp/ccvIsmyo.s:88     .text.MIDI_Device_Flush:00000000 MIDI_Device_Flush
-     /tmp/ccvIsmyo.s:151    .text.MIDI_Device_USBTask:00000000 MIDI_Device_USBTask
-     /tmp/ccvIsmyo.s:174    .text.MIDI_Device_SendEventPacket:00000000 MIDI_Device_SendEventPacket
-     /tmp/ccvIsmyo.s:242    .text.MIDI_Device_ConfigureEndpoints:00000000 MIDI_Device_ConfigureEndpoints
+     /tmp/cc18zZWO.s:2      *ABS*:0000003f __SREG__
+     /tmp/cc18zZWO.s:3      *ABS*:0000003e __SP_H__
+     /tmp/cc18zZWO.s:4      *ABS*:0000003d __SP_L__
+     /tmp/cc18zZWO.s:5      *ABS*:00000034 __CCP__
+     /tmp/cc18zZWO.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/cc18zZWO.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/cc18zZWO.s:19     .text.MIDI_Device_ReceiveEventPacket:00000000 MIDI_Device_ReceiveEventPacket
+     /tmp/cc18zZWO.s:88     .text.MIDI_Device_Flush:00000000 MIDI_Device_Flush
+     /tmp/cc18zZWO.s:151    .text.MIDI_Device_USBTask:00000000 MIDI_Device_USBTask
+     /tmp/cc18zZWO.s:174    .text.MIDI_Device_SendEventPacket:00000000 MIDI_Device_SendEventPacket
+     /tmp/cc18zZWO.s:242    .text.MIDI_Device_ConfigureEndpoints:00000000 MIDI_Device_ConfigureEndpoints
 
 UNDEFINED SYMBOLS
 USB_DeviceState

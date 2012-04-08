@@ -9,11 +9,11 @@
   16               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 HIDClassHost.c
-     /tmp/ccBTcTcS.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccBTcTcS.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccBTcTcS.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccBTcTcS.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccBTcTcS.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccBTcTcS.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccjVGTUc.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccjVGTUc.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccjVGTUc.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccjVGTUc.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccjVGTUc.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccjVGTUc.s:7      *ABS*:00000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

@@ -1618,20 +1618,20 @@
  1705               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 RNDISClassDevice.c
-     /tmp/cc2vMR9y.s:2      *ABS*:0000003f __SREG__
-     /tmp/cc2vMR9y.s:3      *ABS*:0000003e __SP_H__
-     /tmp/cc2vMR9y.s:4      *ABS*:0000003d __SP_L__
-     /tmp/cc2vMR9y.s:5      *ABS*:00000034 __CCP__
-     /tmp/cc2vMR9y.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/cc2vMR9y.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/cc2vMR9y.s:19     .text.RNDIS_Device_IsPacketReceived:00000000 RNDIS_Device_IsPacketReceived
-     /tmp/cc2vMR9y.s:69     .text.RNDIS_Device_SendPacket:00000000 RNDIS_Device_SendPacket
-     /tmp/cc2vMR9y.s:227    .text.RNDIS_Device_USBTask:00000000 RNDIS_Device_USBTask
-     /tmp/cc2vMR9y.s:1523   .data:00000000 C.12.4031
-     /tmp/cc2vMR9y.s:331    .text.RNDIS_Device_ReadPacket:00000000 RNDIS_Device_ReadPacket
-     /tmp/cc2vMR9y.s:473    .text.RNDIS_Device_ConfigureEndpoints:00000000 RNDIS_Device_ConfigureEndpoints
-     /tmp/cc2vMR9y.s:630    .text.RNDIS_Device_ProcessControlRequest:00000000 RNDIS_Device_ProcessControlRequest
-     /tmp/cc2vMR9y.s:1532   .progmem.data:00000000 AdapterSupportedOIDList
+     /tmp/ccCCBTWM.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccCCBTWM.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccCCBTWM.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccCCBTWM.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccCCBTWM.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccCCBTWM.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccCCBTWM.s:19     .text.RNDIS_Device_IsPacketReceived:00000000 RNDIS_Device_IsPacketReceived
+     /tmp/ccCCBTWM.s:69     .text.RNDIS_Device_SendPacket:00000000 RNDIS_Device_SendPacket
+     /tmp/ccCCBTWM.s:227    .text.RNDIS_Device_USBTask:00000000 RNDIS_Device_USBTask
+     /tmp/ccCCBTWM.s:1523   .data:00000000 C.12.4031
+     /tmp/ccCCBTWM.s:331    .text.RNDIS_Device_ReadPacket:00000000 RNDIS_Device_ReadPacket
+     /tmp/ccCCBTWM.s:473    .text.RNDIS_Device_ConfigureEndpoints:00000000 RNDIS_Device_ConfigureEndpoints
+     /tmp/ccCCBTWM.s:630    .text.RNDIS_Device_ProcessControlRequest:00000000 RNDIS_Device_ProcessControlRequest
+     /tmp/ccCCBTWM.s:1532   .progmem.data:00000000 AdapterSupportedOIDList
 
 UNDEFINED SYMBOLS
 USB_DeviceState

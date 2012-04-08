@@ -706,13 +706,13 @@
  739               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 DeviceStandardReq.c
-     /tmp/ccz3hMv4.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccz3hMv4.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccz3hMv4.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccz3hMv4.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccz3hMv4.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccz3hMv4.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/ccz3hMv4.s:19     .text.USB_Device_ProcessControlRequest:00000000 USB_Device_ProcessControlRequest
+     /tmp/ccvVWd1i.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccvVWd1i.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccvVWd1i.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccvVWd1i.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccvVWd1i.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccvVWd1i.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccvVWd1i.s:19     .text.USB_Device_ProcessControlRequest:00000000 USB_Device_ProcessControlRequest
                             *COM*:00000001 USB_Device_CurrentlySelfPowered
                             *COM*:00000001 USB_Device_RemoteWakeupEnabled
                             *COM*:00000001 USB_Device_ConfigurationNumber

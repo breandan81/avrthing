@@ -9,11 +9,11 @@
   16               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 StillImageClassHost.c
-     /tmp/ccp6LrD5.s:2      *ABS*:0000003f __SREG__
-     /tmp/ccp6LrD5.s:3      *ABS*:0000003e __SP_H__
-     /tmp/ccp6LrD5.s:4      *ABS*:0000003d __SP_L__
-     /tmp/ccp6LrD5.s:5      *ABS*:00000034 __CCP__
-     /tmp/ccp6LrD5.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/ccp6LrD5.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccQQysgo.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccQQysgo.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccQQysgo.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccQQysgo.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccQQysgo.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccQQysgo.s:7      *ABS*:00000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

@@ -72,13 +72,13 @@
  105               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 USBTask.c
-     /tmp/cclkMJhh.s:2      *ABS*:0000003f __SREG__
-     /tmp/cclkMJhh.s:3      *ABS*:0000003e __SP_H__
-     /tmp/cclkMJhh.s:4      *ABS*:0000003d __SP_L__
-     /tmp/cclkMJhh.s:5      *ABS*:00000034 __CCP__
-     /tmp/cclkMJhh.s:6      *ABS*:00000000 __tmp_reg__
-     /tmp/cclkMJhh.s:7      *ABS*:00000001 __zero_reg__
-     /tmp/cclkMJhh.s:19     .text.USB_USBTask:00000000 USB_USBTask
+     /tmp/ccRmAaeB.s:2      *ABS*:0000003f __SREG__
+     /tmp/ccRmAaeB.s:3      *ABS*:0000003e __SP_H__
+     /tmp/ccRmAaeB.s:4      *ABS*:0000003d __SP_L__
+     /tmp/ccRmAaeB.s:5      *ABS*:00000034 __CCP__
+     /tmp/ccRmAaeB.s:6      *ABS*:00000000 __tmp_reg__
+     /tmp/ccRmAaeB.s:7      *ABS*:00000001 __zero_reg__
+     /tmp/ccRmAaeB.s:19     .text.USB_USBTask:00000000 USB_USBTask
                             *COM*:00000001 USB_DeviceState
                             *COM*:00000001 USB_IsInitialized
                             *COM*:00000008 USB_ControlRequest
