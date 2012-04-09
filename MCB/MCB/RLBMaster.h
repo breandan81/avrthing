@@ -4,8 +4,7 @@ functionality.  There are a million ways this could be expanded to take advantag
 etc.  The goal of RodLogic is KISS 
 */
 
-int sendCommand(char slave, command = 0); //returns -1 if fails
-int sendStop(); //sends a stop condition
+int sendCommand(char slave); //returns -1 if fails
 int rcvByte(); //if twint is set pulls the last byte out and clears it, otherwise returns -1
 int sendByte();//sends a Byte
 int sendStop();//ends transmission
@@ -13,9 +12,6 @@ int rcvFrom();//begins a master receive
 
 
 char status = 0; 
-#define CLEAR 0
-#define SENDING 1
-#define RECEIVING 2
 
 
 
