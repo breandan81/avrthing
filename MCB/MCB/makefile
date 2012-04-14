@@ -133,15 +133,14 @@ include $(LUFA_PATH)/LUFA/makefile
 
 # List C source files here. (C dependencies are automatically generated.)
 SRC = 	$(TARGET).c \
-		Descriptors.c                                               \
+	Descriptors.c                                               \
 	  $(LUFA_SRC_USB)                                             \
 	  $(LUFA_SRC_USBCLASS)
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
 CPPSRC = main.cpp\
-	user.cpp\
-	RLBMaster.cpp
+	user.cpp
 
 # List Assembler source files here.
 #     Make them always end in a capital .S.  Files ending in a lowercase .s
