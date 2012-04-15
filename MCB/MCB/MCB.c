@@ -22,7 +22,7 @@
  *  within a device can be differentiated from one another.
  */
 //
-int halfMillis=0;
+unsigned long halfMillis=0;
 //
 
 USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
@@ -128,7 +128,7 @@ ISR(TIMER1_COMPA_vect)
 }
 
 
-int millis()
+unsigned int millis()
 {
 	return halfMillis >> 1;
 }

@@ -52,7 +52,7 @@
 		void EVENT_USB_Device_ControlRequest(void);
 		
 		int micros(void );
-		int millis(void );
+		unsigned int millis(void );
 		int seconds(void );
 		int minutes(void );
 		int hours(void );

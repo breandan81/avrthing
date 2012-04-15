@@ -1,24 +1,23 @@
 #include "user.h"
+#include "digitalIO.h"
+#define blinkPin 22
 
-char input[20];
-void setup()
+void  setup()
 {
-	gets(input);
-	puts("beginning now... \n");
+	setDirection(blinkPin, 1);
+	
 }
 
 void loop()
 {
-	puts("Would you like to play a game? (y/m)\n");
-	gets(input);
-	switch(input[0])
-	{
-		case 'y':
-			puts("lets play thermonuclear war\n");
-			break;
-		case 'n':
-			puts("smart move, only way to win is not to play");
-			break;
-		
-	}
+	static char state = 0;
+
+//	printf("toggling pin %d \n\r", blinkPin);
+	state = !state;
+	digitalWrite(blinkPin, state);
+	unsigned int time = millis();
+	//printf("%d \n\r", time);
+	while(millis()-time < 500)
+	;//	printf("%d\r", (unsigned int)millis()-time);
+	
 }
