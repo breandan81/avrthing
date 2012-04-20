@@ -51,11 +51,9 @@
 		void EVENT_USB_Device_ConfigurationChanged(void);
 		void EVENT_USB_Device_ControlRequest(void);
 		
-		int micros(void );
-		unsigned int millis(void );
-		int seconds(void );
-		int minutes(void );
-		int hours(void );
+		unsigned long micros(void );
+		unsigned long millis(void );
+		unsigned long seconds(void );
 
 #endif
 

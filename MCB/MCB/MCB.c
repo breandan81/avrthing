@@ -17,12 +17,16 @@
 		#include <LUFA/Drivers/USB/USB.h>
 		
 #include "MCB.h"
+
+void initRTC(void);
 /** LUFA CDC Class driver interface configuration and state information. This structure is
  *  passed to all CDC Class driver functions, so that multiple instances of the same class
  *  within a device can be differentiated from one another.
  */
 //
-unsigned long halfMillis=0;
+unsigned short halfMillis=1;
+unsigned short overflows1 = 0;
+unsigned short overflows2 = 0;
 //
 
 USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
@@ -60,16 +64,12 @@ void initMCB(void)
 
 	/* Create a regular character stream for the interface so that it can be used with the stdio.h functions */
 	CDC_Device_CreateBlockingStream(&VirtualSerial_CDC_Interface, &USBSerialStream);
-
-	char input[20];	
-
+	initRTC();
 	sei();
 
 	stdout = &USBSerialStream;
 	stdin = &USBSerialStream;
-	int i = 0;
 
-	initRTC();
 }
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
@@ -106,7 +106,7 @@ void EVENT_USB_Device_ControlRequest(void)
 }
 
 
-void initRTC()
+void initRTC(void)
 {
 
 	TCCR1B |= _BV(WGM12); //set WGM12, will make OCR1A TOP for timer1	
@@ -124,12 +124,32 @@ ISR(TIMER1_COMPA_vect)
         CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
         USB_USBTask();
 
-	halfMillis++; 
+	halfMillis++;
+	if(!halfMillis)
+	{
+		overflows1++;
+		if(!overflows1)
+		{
+			overflows2++;
+		}
+	} 
 }
 
 
-unsigned int millis()
+unsigned long millis()
 {
-	return halfMillis >> 1;
+	return (halfMillis>> 1) + (overflows1 <<15) + (((long)overflows2) <<31);
 }
 
+unsigned long seconds()
+{
+	long seconds = overflows1;
+	seconds = ((seconds << 16) + halfMillis)/2000;
+	long temp = overflows2;
+	temp = temp << 16;
+	temp /= 1000;
+	temp<<16;
+	seconds += temp;
+	return seconds;
+
+}
