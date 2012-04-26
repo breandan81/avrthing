@@ -1,12 +1,30 @@
+#include <stdlib.h>
+#include <avr/io.h>
+#include <stdio.h>
+#include <avr/interrupt.h>
+#include <util/twi.h>
 #include "ringBuffer.h"
 
+
+void * operator new(size_t size);
+void operator delete(void * ptr); 
+
+void * operator new(size_t size)
+{
+  return malloc(size);
+}
+
+void operator delete(void * ptr)
+{
+  free(ptr);
+} 
 
 ringBuffer::ringBuffer(int len)
 {
 	bytes = 0;
 	size = len;
-	index = 0
-	buf = new char[len];
+	index = 0;
+	buf = new char(len);
 }
 ringBuffer::~ringBuffer()
 {

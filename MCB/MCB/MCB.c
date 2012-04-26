@@ -148,8 +148,9 @@ unsigned long seconds()
 	long temp = overflows2;
 	temp = temp << 16;
 	temp /= 1000;
-	temp<<16;
+	temp = temp<<16;
 	seconds += temp;
 	return seconds;
 
 }
+

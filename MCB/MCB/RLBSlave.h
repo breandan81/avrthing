@@ -6,46 +6,6 @@
 #include <avr/interrupt.h>
 #include <util/twi.h>
 
-class ringBuffer
-{
-	char *buf;
-	char size;
-	char index;
-	char bytes;
-	public:
-	ringBuffer(int len);
-	~ringBuffer();
-	int push(char me);
-	int pop();
-};
-ringBuffer::ringBuffer(int len)
-{
-	bytes = 0;
-	size = len;
-	index = 0
-	buf = new char[len];
-}
-ringBuffer::~ringBuffer()
-{
-	delete buf;
-}
-int ringBuffer::push(char me)
-{
-	if(bytes > size)
-	{
-		return -1;
-	}
-	else
-	{
-		index++;
-		index %= size;
-		bytes++;
-	}
-}
-int ringBuffer::pop(char me)
-{
-
-}
 
 ISR(TWI_vect)
 {
