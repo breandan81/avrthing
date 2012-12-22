@@ -11,5 +11,6 @@ void 	setRefInternal();
 void	setRefExternal();
 short 	setPin(short me);
 short 	convert();
-
+short	analogRead(short me);
+void	setDefaults();
 #endif

@@ -68,3 +68,30 @@ short setPin(short me)
 	}
 	return pin;
 }
+short convert()
+{
+	ADCSRA |= 1 << ADEN; //enable ADC
+	ADCSRA |= 1 << ADSC; //begin a conversion
+	
+	while(ADCSRA & (1 << ADSC))
+	{}
+	short result = ADCL;
+	short result |= ADCH<<8;
+	
+	ADCSRA &= ~(1<<ADEN);
+	return result;
+}
+
+void setDefaults()
+{
+	setRefVCC();
+}
+short analogRead(short me)
+{
+	if(setPin(me)<0)
+		return -1;
+
+	short result = convert();
+	return result;
+}
+
