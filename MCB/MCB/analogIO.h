@@ -13,4 +13,5 @@ short 	setPin(short me);
 short 	convert();
 short	analogRead(short me);
 void	setDefaults();
+void 	analogSetup();
 #endif

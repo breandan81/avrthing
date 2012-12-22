@@ -1,3 +1,10 @@
+#include "analogIO.h"
+#include <avr/io.h>
+#include <avr/wdt.h>
+#include <avr/power.h>
+#include <avr/interrupt.h>
+#include <stdio.h>
+
 /*Hardware dependent, translates a pin on the package to the bits that need to be written to ADMUX
 this is written for the AWESOMEDIP
 
@@ -21,7 +28,7 @@ AD12		PB5		26
 AD13		PB6		27
 */
 
-short getAnalogPin(short me)
+short getPin(short me)
 {
 	switch(me)
 	{
@@ -64,7 +71,15 @@ short setPin(short me)
 		return -1;
 	else
 	{
-		ADMUX = (ADMUX & 0xCF) | pin;
+		ADMUX = (ADMUX & 0xC0) | (pin&0x0F);
+		if(pin & 0xF0)
+		{
+			ADCSRB |= _BV(MUX5);
+		}
+		else
+		{
+			ADCSRB &= ~_BV(MUX5);
+		}
 	}
 	return pin;
 }
@@ -72,19 +87,20 @@ short convert()
 {
 	ADCSRA |= 1 << ADEN; //enable ADC
 	ADCSRA |= 1 << ADSC; //begin a conversion
+
 	
 	while(ADCSRA & (1 << ADSC))
 	{}
 	short result = ADCL;
-	short result |= ADCH<<8;
+	result |= ADCH<<8;
 	
 	ADCSRA &= ~(1<<ADEN);
 	return result;
 }
 
-void setDefaults()
+void analogSetup()
 {
-	setRefVCC();
+	setRefInternal();
 }
 short analogRead(short me)
 {
