@@ -143,7 +143,8 @@ CPPSRC = main.cpp\
 	user.cpp \
 	digitalIO.cpp\
 	ringBuffer.cpp\
-	delays.cpp
+	delays.cpp\
+	analogIO.cpp
 
 # List Assembler source files here.
 #     Make them always end in a capital .S.  Files ending in a lowercase .s
