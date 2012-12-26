@@ -33,27 +33,17 @@
  *  Header file for VirtualSerial.c.
  */
 
-#ifndef _MCB_H_
-#define _MCB_H_
+#ifndef USBSERIAL_H 
+#define USBSERIAL_H
 
 
 
 	
 //defines 
 	
-	#define MHZ 16 //change this if using a different clock speed obviously
 	/* Function Prototypes: */
 		void initMCB(void);
-		void SetupHardware(void);
-
-		void EVENT_USB_Device_Connect(void);
-		void EVENT_USB_Device_Disconnect(void);
-		void EVENT_USB_Device_ConfigurationChanged(void);
-		void EVENT_USB_Device_ControlRequest(void);
-		
-		unsigned long micros(void );
-		unsigned long millis(void );
-		unsigned long seconds(void );
+	
 
 
 #endif

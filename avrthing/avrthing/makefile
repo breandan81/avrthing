@@ -106,7 +106,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = MCB
+TARGET = main 
 
 
 # Object files directory
@@ -132,19 +132,12 @@ include $(LUFA_PATH)/LUFA/makefile
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = 	$(TARGET).c \
-	Descriptors.c                                               \
-	  $(LUFA_SRC_USB)                                             \
+SRC = 	  $(LUFA_SRC_USB)                                             \
 	  $(LUFA_SRC_USBCLASS)
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
-CPPSRC = main.cpp\
-	user.cpp \
-	digitalIO.cpp\
-	ringBuffer.cpp\
-	delays.cpp\
-	analogIO.cpp
+CPPSRC = $(TARGET).cpp
 
 # List Assembler source files here.
 #     Make them always end in a capital .S.  Files ending in a lowercase .s

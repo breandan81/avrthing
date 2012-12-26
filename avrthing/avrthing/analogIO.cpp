@@ -1,3 +1,4 @@
+#include "avrthing.h"
 #include "analogIO.h"
 #include <avr/io.h>
 #include <avr/wdt.h>

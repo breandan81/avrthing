@@ -1,20 +1,6 @@
 #include "user.h"
-
-extern "C" 
-{
-#include "MCB.h"
-}
-
- 
+#include "avrthing.h"
 
 int main(void)
 {
-        initMCB();
-
-	setup();	
-
-	for (;;)
-	{
-		loop();
-	}
 }

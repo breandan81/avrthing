@@ -16,7 +16,17 @@
 		#include <LUFA/Version.h>
 		#include <LUFA/Drivers/USB/USB.h>
 		
-#include "MCB.h"
+#include "avrthing.h"
+#include "usbserial.h"
+
+//prototypes not in header
+	void SetupHardware(void);
+	void EVENT_USB_Device_Connect(void);
+	void EVENT_USB_Device_Disconnect(void);
+	void EVENT_USB_Device_ConfigurationChanged(void);
+	void EVENT_USB_Device_ControlRequest(void);
+		
+//end prototypes
 
 void initRTC(void);
 /** LUFA CDC Class driver interface configuration and state information. This structure is
@@ -58,14 +68,12 @@ static FILE USBSerialStream;
 /** Main program entry point. This routine contains the overall program flow, including initial
  *  setup of all components and the main program loop.
  */
-void initMCB(void)
+void initUSBSerial(void)
 {
   	SetupHardware();
 
 	/* Create a regular character stream for the interface so that it can be used with the stdio.h functions */
 	CDC_Device_CreateBlockingStream(&VirtualSerial_CDC_Interface, &USBSerialStream);
-	initRTC();
-	sei();
 
 	stdout = &USBSerialStream;
 	stdin = &USBSerialStream;
@@ -75,8 +83,8 @@ void initMCB(void)
 void SetupHardware(void)
 {
 	/* Disable watchdog if enabled by bootloader/fuses */
-	MCUSR &= ~(1 << WDRF);
-	wdt_disable();
+//	MCUSR &= ~(1 << WDRF);
+//	wdt_disable();
 
 	/* Disable clock division */
 	clock_prescale_set(clock_div_1);
@@ -105,52 +113,4 @@ void EVENT_USB_Device_ControlRequest(void)
 	CDC_Device_ProcessControlRequest(&VirtualSerial_CDC_Interface);
 }
 
-
-void initRTC(void)
-{
-
-	TCCR1B |= _BV(WGM12); //set WGM12, will make OCR1A TOP for timer1	
-	OCR1A = MHZ*500;//half a ms 
-	
-	TCCR1B |= _BV(CS10); //clock source no prescaling
-	TIMSK1 |= _BV(OCIE1A);//output compare match interrupt enabled
-	
-	sei();
-}
-
-ISR(TIMER1_COMPA_vect)
-{
-	CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
-        CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
-        USB_USBTask();
-
-	halfMillis++;
-	if(!halfMillis)
-	{
-		overflows1++;
-		if(!overflows1)
-		{
-			overflows2++;
-		}
-	} 
-}
-
-
-unsigned long millis()
-{
-	return (halfMillis>> 1) + (overflows1 <<15) + (((long)overflows2) <<31);
-}
-
-unsigned long seconds()
-{
-	long seconds = overflows1;
-	seconds = ((seconds << 16) + halfMillis)/2000;
-	long temp = overflows2;
-	temp = temp << 16;
-	temp /= 1000;
-	temp = temp<<16;
-	seconds += temp;
-	return seconds;
-
-}
 
