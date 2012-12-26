@@ -106,7 +106,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = main 
+TARGET = main
 
 
 # Object files directory
@@ -132,8 +132,7 @@ include $(LUFA_PATH)/LUFA/makefile
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = 	  $(LUFA_SRC_USB)                                             \
-	  $(LUFA_SRC_USBCLASS)
+SRC = 
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
