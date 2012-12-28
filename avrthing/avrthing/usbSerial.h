@@ -42,7 +42,7 @@
 //defines 
 	
 	/* Function Prototypes: */
-		void initMCB(void);
+		void initUSBSerial(void);
 	
 
 

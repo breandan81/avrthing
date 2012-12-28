@@ -17,7 +17,7 @@
 		#include <LUFA/Drivers/USB/USB.h>
 		
 #include "avrthing.h"
-#include "usbserial.h"
+#include "usbSerial.h"
 
 //prototypes not in header
 	void SetupHardware(void);

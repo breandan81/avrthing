@@ -132,11 +132,15 @@ include $(LUFA_PATH)/LUFA/makefile
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = 
+SRC = usbSerial.c\
+	Descriptors.c\
+	$(LUFA_SRC_USB)\
+	$(LUFA_SRC_USBCLASS) 
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
-CPPSRC = $(TARGET).cpp
+CPPSRC = $(TARGET).cpp\
+	pins/awesomedip.cpp
 
 # List Assembler source files here.
 #     Make them always end in a capital .S.  Files ending in a lowercase .s
