@@ -1,7 +1,7 @@
 #ifndef AWESOMEDIP_H
 #define AWESOMEDIP_H
+#include <avr/pgmspace.h>
 
-
-extern unsigned char pins[]; 
+extern const unsigned char pins[] PROGMEM; 
 
 #endif
