@@ -1,6 +1,7 @@
 #include "avrthing.h"
 #include "timer.h"
 #include <avr/interrupt.h>
+#include <stdio.h>
 //
 unsigned short halfMillis=1;
 unsigned short overflows1 = 0;
@@ -44,7 +45,7 @@ ISR(TIMER1_COMPA_vect)
 
 unsigned long millis()
 {
-	return (halfMillis>> 1) + (overflows1 <<15) + (((long)overflows2) <<31);
+	return (halfMillis>> 1) + (overflows1 <<15) + (((unsigned long)overflows2) <<31);
 }
 
 unsigned long seconds()
@@ -58,8 +59,15 @@ unsigned long seconds()
 	seconds += temp;
 	return seconds;
 }
-void delayMillis(int interval)
+void delayMillis(unsigned int interval)
 {
+	
 	unsigned long start = millis();
-	while(millis() - start < interval);
+	unsigned long current = millis();
+//	printf("running delay millis for %d, %d\r\n", interval, start);
+	
+	while(current-start < interval)
+	{	
+		current = millis();//this would be way more efficient without doing anything in the loop itself but avr-gcc optimizes it out if there is nothing in here and gets stuck in an infinite loop
+	}
 }

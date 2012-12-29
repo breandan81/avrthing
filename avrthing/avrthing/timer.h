@@ -3,5 +3,5 @@
 void initRTC(void);
 unsigned long millis();
 unsigned long seconds();
-void delayMillis(int interval);
+void delayMillis(unsigned int interval);
 #endif

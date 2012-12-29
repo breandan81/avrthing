@@ -3,13 +3,18 @@
 
 int main(void)
 {
+	char buf[10];
 
 	initUSBSerial();
 	initRTC();
-	while(true);
+
+	delayMillis(10);
+
+	while(true)
 	{
+//		scanf("%s", buf);
 		printf("hello world\n\r");
-		delayMillis(1000);
+		delayMillis(100);
 	}	
 
 	return 0;
