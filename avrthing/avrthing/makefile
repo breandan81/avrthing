@@ -140,6 +140,7 @@ SRC = usbSerial.c\
 
 # List C++ source files here. (C dependencies are automatically generated.)
 CPPSRC = $(TARGET).cpp\
+	timer.cpp\
 	pins/awesomedip.cpp
 
 # List Assembler source files here.

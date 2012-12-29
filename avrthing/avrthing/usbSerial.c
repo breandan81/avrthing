@@ -16,29 +16,17 @@
 		#include <LUFA/Version.h>
 		#include <LUFA/Drivers/USB/USB.h>
 		
-#include "avrthing.h"
-#include "usbSerial.h"
+
+
 
 //prototypes not in header
-	void SetupHardware(void);
-	void EVENT_USB_Device_Connect(void);
-	void EVENT_USB_Device_Disconnect(void);
-	void EVENT_USB_Device_ConfigurationChanged(void);
-	void EVENT_USB_Device_ControlRequest(void);
-		
+	
 //end prototypes
 
-void initRTC(void);
 /** LUFA CDC Class driver interface configuration and state information. This structure is
  *  passed to all CDC Class driver functions, so that multiple instances of the same class
  *  within a device can be differentiated from one another.
  */
-//
-unsigned short halfMillis=1;
-unsigned short overflows1 = 0;
-unsigned short overflows2 = 0;
-//
-
 USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
 	{
 		.Config =
@@ -64,6 +52,14 @@ USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
  */
 static FILE USBSerialStream;
 
+
+//
+void runUSB(void)
+{
+	CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
+        CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
+        USB_USBTask();	
+}
 
 /** Main program entry point. This routine contains the overall program flow, including initial
  *  setup of all components and the main program loop.

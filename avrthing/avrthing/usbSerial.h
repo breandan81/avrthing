@@ -36,13 +36,19 @@
 #ifndef USBSERIAL_H 
 #define USBSERIAL_H
 
-
+void initUSBSerial(void);
+void SetupHardware(void);
+void EVENT_USB_Device_Connect(void);
+void EVENT_USB_Device_Disconnect(void);
+void EVENT_USB_Device_ConfigurationChanged(void);
+void EVENT_USB_Device_ControlRequest(void);
+void runUSB(void);	
 
 	
 //defines 
 	
 	/* Function Prototypes: */
-		void initUSBSerial(void);
+
 	
 
 

@@ -1,5 +1,18 @@
 #include "avrthing.h"
 #include "timer.h"
+#include <avr/interrupt.h>
+//
+unsigned short halfMillis=1;
+unsigned short overflows1 = 0;
+unsigned short overflows2 = 0;
+//
+
+void runTasks()//called by the timer interrupt put anything you need to run regularly here
+{
+	#ifdef USBSERIAL_H
+	runUSB();
+	#endif
+}
 
 void initRTC(void)
 {
@@ -15,11 +28,7 @@ void initRTC(void)
 
 ISR(TIMER1_COMPA_vect)
 {
-	#ifdef USBSERIAL_H
-	CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
-        CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
-        USB_USBTask();
-	#endif
+	runTasks();	
 
 	halfMillis++;
 	if(!halfMillis)
