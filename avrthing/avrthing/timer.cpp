@@ -65,11 +65,11 @@ void delayMillis(unsigned int interval)
 {
 	
 	unsigned long start = millis();
-//	unsigned long current = millis();
+	volatile unsigned long current = millis();
 //	printf("running delay millis for %d, %d\r\n", interval, start);
 	
-	while(millis()-start < interval)
+	while(current-start < interval)
 	{
-		asm("");
+		current = millis();
 	}
 }
