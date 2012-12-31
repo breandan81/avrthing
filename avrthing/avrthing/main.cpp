@@ -13,7 +13,7 @@ int main(void)
 	while(true)
 	{
 //		scanf("%s", buf);
-		printf("hello world\n\r");
+		printf("hello world %lu\n\r", millis());
 		delayMillis(100);
 	}	
 
