@@ -70,6 +70,6 @@ void delayMillis(unsigned int interval)
 	
 	while(current-start < interval)
 	{
-		current = millis();
+		current=millis();
 	}
 }

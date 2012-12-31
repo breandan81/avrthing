@@ -10,6 +10,7 @@ int main(void)
 
 	delayMillis(10);
 
+	scanf("%s", buf);
 	while(true)
 	{
 //		scanf("%s", buf);
