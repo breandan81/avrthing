@@ -43,7 +43,7 @@ ISR(TIMER1_COMPA_vect)
 }
 
 
-inline unsigned long millis()
+unsigned long millis()
 {
 	unsigned long returnVal = (halfMillis>> 1) + (((unsigned long)overflows1) <<15) + (((unsigned long)overflows2) <<31);
 
@@ -70,6 +70,6 @@ void delayMillis(unsigned int interval)
 	
 	while(millis()-start < interval)
 	{
-		asm("nop");	
+		asm("");
 	}
 }
