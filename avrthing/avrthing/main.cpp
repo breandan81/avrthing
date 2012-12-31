@@ -8,12 +8,12 @@ int main(void)
 	initUSBSerial();
 	initRTC();
 
-	delayMillis(10);
+//	delayMillis(10);
 
-	scanf("%s", buf);
+//	scanf("%s", buf);
 	while(true)
 	{
-		scanf("%s", buf);
+//		scanf("%s", buf);
 		printf("hello world %lu\n\r", millis());
 		delayMillis(100);
 	}	
