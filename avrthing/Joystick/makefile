@@ -46,7 +46,7 @@ FORMAT = ihex
 
 
 # Target file name (without extension).
-TARGET = Joystick
+TARGET = main
 
 
 # Object files directory
@@ -72,11 +72,14 @@ include $(LUFA_PATH)/LUFA/makefile
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = Descriptors.c \
-	  Joystick.c \
-	  timer.c \
-	  $(LUFA_SRC_USB) \
-	  $(LUFA_SRC_USBCLASS)
+SRC =	main.c \
+	Descriptors.c \
+	timer.c \
+	USBMacros/Joystick.c \
+	USBMacros/usb.c \
+	USBMacros/usbSerial.c \
+	$(LUFA_SRC_USB) \
+	$(LUFA_SRC_USBCLASS)
 
 
 # List C++ source files here. (C dependencies are automatically generated.)

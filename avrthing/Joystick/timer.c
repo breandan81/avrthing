@@ -10,9 +10,7 @@ volatile unsigned short overflows2 = 0;
 
 void runTasks()//called by the timer interrupt put anything you need to run regularly here
 {
-	#ifdef USBSERIAL_H
 	runUSB();
-	#endif
 }
 
 void initRTC(void)
@@ -42,7 +40,6 @@ ISR(TIMER1_COMPA_vect)
 	} 
 }
 
-
 unsigned long millis()
 {
 	volatile unsigned long returnVal = (halfMillis>> 1) + (((unsigned long)overflows1) <<15) + (((unsigned long)overflows2) <<31);
@@ -61,6 +58,7 @@ unsigned long seconds()
 	seconds += temp;
 	return seconds;
 }
+
 void delayMillis(unsigned int interval)
 {
 	
