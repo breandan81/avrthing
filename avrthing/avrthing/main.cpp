@@ -14,7 +14,7 @@ int main(void)
 	while(true)
 	{
 //		scanf("%s", buf);
-		printf("hello world %lu\n\r", millis());
+		printf("hello world %lu\n\r", (millis()/10) %100);
 		delayMillis(100);
 	}	
 
