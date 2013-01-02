@@ -3,7 +3,8 @@
 
 #include <avr/pgmspace.h>
 #include <LUFA/Drivers/USB/USB.h>
-#include "USBMacros.h"
+#include "USBMacros/USBMacros.h"
+#include "USBMacros/JoystickMacros.h"
 
 CONFIG_BEGIN
 JOYSTICK_CONFIG
