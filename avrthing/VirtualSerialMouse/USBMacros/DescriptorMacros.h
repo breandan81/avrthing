@@ -6,11 +6,6 @@ typedef struct \
 #define CONFIG_END \
 } USB_Descriptor_Configuration_t;
 
-#define JOYSTICK_CONFIG \
-	USB_Descriptor_Interface_t            HID_Interface; \
-	USB_HID_Descriptor_HID_t              HID_JoystickHID; \
-        USB_Descriptor_Endpoint_t             HID_ReportINEndpoint;
-
 #define DEVICE_DESC(A, B, C, D, E, F) \
 const USB_Descriptor_Device_t PROGMEM DeviceDescriptor = \
 { \
