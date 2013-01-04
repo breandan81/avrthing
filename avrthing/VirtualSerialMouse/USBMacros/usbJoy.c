@@ -41,6 +41,8 @@ void JS_StartOfFrame(void)
 	HID_Device_MillisecondElapsed(&Joystick_HID_Interface);
 }
 
+bool printflag;
+
 bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
                                          uint8_t* const ReportID,
                                          const uint8_t ReportType,
@@ -51,8 +53,13 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 
 	JoystickReport->Y =  (millis()/10) % 200 - 100;
 	JoystickReport->X =  (millis()/10) % 200 - 100;
-
-	printf("X: %d\tY: %d\tmillis(): %lu\r\n",JoystickReport->X,JoystickReport->X,millis());
+	if(millis()%100==0)
+		if(printflag)
+			printf("X: %d\tY: %d\tmillis(): %lu\r\n",JoystickReport->X,JoystickReport->X,millis());
+		else
+			printflag==false;
+	else
+		printflag=true;
 
 	*ReportSize = sizeof(USB_JoystickReport_Data_t);
 	return false;

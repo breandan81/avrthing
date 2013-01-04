@@ -37,23 +37,6 @@ void EVENT_USB_Device_StartOfFrame(void)
 //	Mouse_StartOfFrame();
 }
 
-/*
-bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
-                                         uint8_t* const ReportID,
-                                         const uint8_t ReportType,
-                                         void* ReportData,
-                                         uint16_t* const ReportSize)
-{
-	USB_JoystickReport_Data_t* JoystickReport = (USB_JoystickReport_Data_t*)ReportData;
-
-	JoystickReport->Y =  (millis()/10) % 200 - 100;
-	JoystickReport->X =  (millis()/10) % 200 - 100;
-
-	*ReportSize = sizeof(USB_JoystickReport_Data_t);
-	return false;
-}
-*/
-
 /** HID class driver callback function for the processing of HID reports from the host.
  *
  *  \param[in] HIDInterfaceInfo  Pointer to the HID class interface configuration structure being referenced
