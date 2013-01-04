@@ -11,7 +11,7 @@ volatile unsigned short overflows2 = 0;
 
 void runTasks()//called by the timer interrupt put anything you need to run regularly here
 {
-	runUSB();
+//	runUSB();
 }
 
 void initRTC(void)
