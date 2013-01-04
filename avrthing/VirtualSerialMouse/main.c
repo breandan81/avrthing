@@ -1,13 +1,13 @@
 #include "main.h"
-#include "avrthing.h"
-#include "USBMacros/Joystick.h"
+#include "USBMacros/timer.h"
+#include "USBMacros/usbMouse.h"
 #include "USBMacros/usbSerial.h"
 #include <LUFA/Drivers/USB/USB.h>
 
-void runUSB()
+void runUSB(void)
 {
-	JS_USBTask();
 	Ser_USBTask();
+	Mouse_USBTask();
 	USB_USBTask();
 }
 
@@ -17,18 +17,20 @@ void SetupHardware(void)
 	/* Disable clock division */
 	clock_prescale_set(clock_div_1);
 
+	initRTC();
 	initUSBSerial();
+	sei();
 	USB_Init();
 }
 
 int main(void)
 {
 	SetupHardware();
-	initRTC();
 
-	for (;;) {
-		runUSB();
-		printf("test %lu",millis());
+	for (;;)
+	{
+		if(millis()%1000<20)
+			printf("test %lu\r\n",millis());
 	}
 }
 

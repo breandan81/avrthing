@@ -1,0 +1,23 @@
+#include "Descriptors.h"
+
+#if (USE_INTERNAL_SERIAL == NO_DESCRIPTOR)
+	#warning USE_INTERNAL_SERIAL is not available on this AVR - please manually construct a device serial descriptor.
+#endif
+
+MOUSE_REPORT_DEFAULT
+
+DEVICE_DESC(USB_CSCP_IADDeviceClass, USB_CSCP_IADDeviceSubclass, USB_CSCP_IADDeviceProtocol, 0x03EB, 0x2062, 0.01)
+
+CONFIG_DESC_BEGIN(3,1,100)
+CDC_CONFIG_DEFAULT,
+MOUSE_CONFIG_DESC
+CONFIG_DESC_END
+
+LANG_DEFAULT
+MANUFACTURER(L"Avrthing",8)
+PRODUCT(L"Virtual Serial and Mouse Demo",29)
+
+GETDESCRIPTOR_CALLBACK_BEGIN
+GETDESCRIPTOR_CALLBACK_MOUSE
+GETDESCRIPTOR_CALLBACK_END
+

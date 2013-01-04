@@ -1,5 +1,6 @@
 #include "avrthing.h"
 #include "Joystick.h"
+#include "usbSerial.h"
 
 /** Event handler for the library USB Connection event. */
 void EVENT_USB_Device_Connect(void)
