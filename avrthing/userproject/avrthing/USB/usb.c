@@ -16,25 +16,25 @@ void EVENT_USB_Device_Disconnect(void)
 /** Event handler for the library USB Configuration Changed event. */
 void EVENT_USB_Device_ConfigurationChanged(void)
 {
-	JS_ConfigChanged();
+//	JS_ConfigChanged();
 	Ser_ConfigChanged();
-//	Mouse_ConfigChanged();
+	Mouse_ConfigChanged();
 	USB_Device_EnableSOFEvents();
 }
 
 /** Event handler for the library USB Control Request reception event. */
 void EVENT_USB_Device_ControlRequest(void)
 {
-	JS_ControlRequest();
+//	JS_ControlRequest();
 	Ser_ControlRequest();
-//	Mouse_ControlRequest();
+	Mouse_ControlRequest();
 }
 
 /** Event handler for the USB device Start Of Frame event. */
 void EVENT_USB_Device_StartOfFrame(void)
 {
-	JS_StartOfFrame();
-//	Mouse_StartOfFrame();
+//	JS_StartOfFrame();
+	Mouse_StartOfFrame();
 }
 
 /** HID class driver callback function for the processing of HID reports from the host.

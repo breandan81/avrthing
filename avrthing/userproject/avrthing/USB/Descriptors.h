@@ -5,8 +5,8 @@
 #include <LUFA/Drivers/USB/USB.h>
 #include "DescriptorMacros.h"
 #include "SerialMacros.h"
-//#include "MouseMacros.h"
-#include "JoystickMacros.h"
+#include "MouseMacros.h"
+//#include "JoystickMacros.h"
 
 #define JOYSTICK_EPNUM                    1
 #define JOYSTICK_EPSIZE                   8
@@ -22,8 +22,8 @@
 
 CONFIG_BEGIN
 SERIAL_CONFIG
-JOYSTICK_CONFIG
-//MOUSE_CONFIG
+//JOYSTICK_CONFIG
+MOUSE_CONFIG
 CONFIG_END
 
 uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,
