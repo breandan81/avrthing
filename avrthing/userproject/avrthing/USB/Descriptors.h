@@ -3,10 +3,10 @@
 
 #include <avr/pgmspace.h>
 #include <LUFA/Drivers/USB/USB.h>
-#include "DescriptorMacros.h"
-#include "SerialMacros.h"
-#include "MouseMacros.h"
-//#include "JoystickMacros.h"
+#include "macros/DescriptorMacros.h"
+#include "macros/SerialMacros.h"
+#include "macros/MouseMacros.h"
+#include "macros/JoystickMacros.h"
 
 #define JOYSTICK_EPNUM                    1
 #define JOYSTICK_EPSIZE                   8

@@ -1,4 +1,3 @@
-#include "Descriptors.h"
 
 	/* Use the HID class driver's standard Joystick report.
 	 *   Number of Axis: 2 (X/Y)
@@ -14,6 +13,12 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] = \
 { \
 	HID_DESCRIPTOR_JOYSTICK(A, B, C, D, E, F) \
 };
+#define JOYSTICK_REPORT_DEFAULT JOYSTICK_REPORT(2, -100, 100, -1, 1, 2)
+
+#define JOYSTICK_CONFIG \
+	USB_Descriptor_Interface_t            HID_Interface; \
+	USB_HID_Descriptor_HID_t              HID_JoystickHID; \
+        USB_Descriptor_Endpoint_t             HID_ReportINEndpoint;
 
 #define HID_JS_CONFIG_DEFAULT \
 .HID_Interface = \
@@ -54,7 +59,7 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] = \
 	}
 
 
-#define GETDESCRIPTOR_CALLBACK_HID \
+#define GETDESCRIPTOR_CALLBACK_HID_JS \
 		case HID_DTYPE_HID: \
 			Address = &ConfigurationDescriptor.HID_JoystickHID; \
 			Size    = sizeof(USB_HID_Descriptor_HID_t); \

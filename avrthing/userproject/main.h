@@ -7,7 +7,7 @@
 */
 #include <LUFA/Drivers/Peripheral/TWI.h>
 
-//void runUSB(void);
+void runUSB(void);
 void SetupHardware(void);
 int main(void);
 

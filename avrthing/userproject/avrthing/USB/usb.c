@@ -1,7 +1,15 @@
 #include "avrthing.h"
-//#include "usbMouse.h"
+#include "usbMouse.h"
 #include "usbJoy.h"
 #include "usbSerial.h"
+
+void runUSB(void)
+{
+	Ser_USBTask();
+	JS_USBTask();
+	Mouse_USBTask();
+	USB_USBTask();
+}
 
 /** Event handler for the library USB Connection event. */
 void EVENT_USB_Device_Connect(void)
