@@ -1,7 +1,7 @@
-#include "usb.h"
-#include "../timer.h"
-#include <LUFA/Drivers/USB/USB.h>
+#include "../../avrthing.h"
+//#include "usbHid.h"
 
+#ifdef AVRTHING_USB
 // Just a sketch, an idea...
 bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
                                          uint8_t* const ReportID,
@@ -16,3 +16,4 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 	return false;
 }
 
+#endif

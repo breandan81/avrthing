@@ -5,13 +5,13 @@
 
 //prototypes
 short 	getPin(short me);
-void  	setRefVCC();
+void  	setRefVCC(void);
 void	setRef(short me);
-void 	setRefInternal();
-void	setRefExternal();
+void 	setRefInternal(void);
+void	setRefExternal(void);
 short 	setPin(short me);
-short 	convert();
+short 	convert(void);
 short	analogRead(short me);
-void	setDefaults();
-void 	analogSetup();
+void	setDefaults(void);
+void 	analogSetup(void);
 #endif

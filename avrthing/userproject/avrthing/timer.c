@@ -1,17 +1,17 @@
-#include "avrthing.h"
-#include "timer.h"
-#include "main.h"
+#include "../avrthing.h"
 #include <avr/interrupt.h>
 #include <stdio.h>
-//
+
 volatile unsigned short halfMillis=1;
 volatile unsigned short overflows1 = 0;
 volatile unsigned short overflows2 = 0;
-//
+
 
 void runTasks()//called by the timer interrupt put anything you need to run regularly here
 {
+#ifdef AVRTHING_USB
 	runUSB();
+#endif
 }
 
 void initRTC(void)
@@ -64,8 +64,6 @@ void delayMillis(unsigned int interval)
 {
 	
 	unsigned long start = millis();
-//	volatile unsigned long current = millis();
-//	printf("running delay millis for %d, %d\r\n", interval, start);
 	
 	while(millis()-start < interval)
 	{

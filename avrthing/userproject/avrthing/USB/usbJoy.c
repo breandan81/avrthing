@@ -1,6 +1,8 @@
+#include "../../avrthing.h"
 #include "usbJoy.h"
-#include "../timer.h"
-#include <LUFA/Drivers/USB/USB.h>
+#ifdef AVRTHING_USB
+
+JOYSTICK_REPORT_DEFAULT
 
 static uint8_t PrevJoystickHIDReportBuffer[sizeof(USB_JoystickReport_Data_t)];
 
@@ -65,3 +67,4 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 	return false;
 }
 
+#endif

@@ -1,5 +1,6 @@
-#include "usbMouse.h"
-#include <LUFA/Drivers/USB/USB.h>
+#include "../../avrthing.h"
+#ifdef AVRTHING_USB
+//#include "usbMouse.h"
 
 /** Buffer to hold the previously generated Mouse HID report, for comparison purposes inside the HID class driver. */
 static uint8_t PrevMouseHIDReportBuffer[sizeof(USB_MouseReport_Data_t)];
@@ -61,3 +62,4 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 void Mouse_USBTask(void) {
 	HID_Device_USBTask(&Mouse_HID_Interface);
 }
+#endif

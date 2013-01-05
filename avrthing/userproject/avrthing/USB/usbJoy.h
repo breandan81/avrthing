@@ -1,4 +1,6 @@
-#include "Descriptors.h"
+
+#define USB_JOY 1
+JOYSTICK_REPORT_DEFAULT
 
 typedef struct
 {

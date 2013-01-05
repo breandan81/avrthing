@@ -1,4 +1,7 @@
-#include "usbSerial.h"
+#include "../../avrthing.h"
+//#include "usbSerial.h"
+
+#ifdef AVRTHING_USB
 
 /** LUFA CDC Class driver interface configuration and state information. This structure is
  *  passed to all CDC Class driver functions, so that multiple instances of the same class
@@ -67,3 +70,4 @@ void initUSBSerial(void)
 	stdin = &USBSerialStream;
 }
 
+#endif

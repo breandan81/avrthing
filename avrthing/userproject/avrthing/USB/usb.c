@@ -1,13 +1,17 @@
-#include "avrthing.h"
-#include "usbMouse.h"
-#include "usbJoy.h"
-#include "usbSerial.h"
+#include "../../avrthing.h"
+#ifdef AVRTHING_USB
 
 void runUSB(void)
 {
+#ifdef USB_CDC
 	Ser_USBTask();
+#endif
+#ifdef USB_JOY
 	JS_USBTask();
+#endif
+#ifdef USB_MOUSE
 	Mouse_USBTask();
+#endif
 	USB_USBTask();
 }
 
@@ -24,25 +28,41 @@ void EVENT_USB_Device_Disconnect(void)
 /** Event handler for the library USB Configuration Changed event. */
 void EVENT_USB_Device_ConfigurationChanged(void)
 {
-//	JS_ConfigChanged();
+#ifdef USB_JOY
+	JS_ConfigChanged();
+#endif
+#ifdef USB_CDC
 	Ser_ConfigChanged();
+#endif
+#ifdef USB_MOUSE
 	Mouse_ConfigChanged();
+#endif
 	USB_Device_EnableSOFEvents();
 }
 
 /** Event handler for the library USB Control Request reception event. */
 void EVENT_USB_Device_ControlRequest(void)
 {
-//	JS_ControlRequest();
+#ifdef USB_JOY
+	JS_ControlRequest();
+#endif
+#ifdef USB_CDC
 	Ser_ControlRequest();
+#endif
+#ifdef USB_MOUSE
 	Mouse_ControlRequest();
+#endif
 }
 
 /** Event handler for the USB device Start Of Frame event. */
 void EVENT_USB_Device_StartOfFrame(void)
 {
-//	JS_StartOfFrame();
+#ifdef USB_JOY
+	JS_StartOfFrame();
+#endif
+#ifdef USB_MOUSE
 	Mouse_StartOfFrame();
+#endif
 }
 
 /** HID class driver callback function for the processing of HID reports from the host.
@@ -62,3 +82,4 @@ void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDI
 	// Unused (but mandatory for the HID class driver) in this demo, since there are no Host->Device reports
 }
 
+#endif // AVRTHING_USB

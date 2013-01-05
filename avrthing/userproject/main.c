@@ -8,7 +8,9 @@ void SetupHardware(void)
 	clock_prescale_set(clock_div_1);
 
 	initRTC();
+#ifdef USB_CDC
 	initUSBSerial();
+#endif
 	sei();
 	USB_Init();
 }
