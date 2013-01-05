@@ -1,8 +1,12 @@
 #include "../../avrthing.h"
-#include "usbJoy.h"
 #ifdef AVRTHING_USB
 
-JOYSTICK_REPORT_DEFAULT
+typedef struct
+{
+	int8_t  X; /**< Current absolute joystick X position, as a signed 8-bit integer */
+	int8_t  Y; /**< Current absolute joystick Y position, as a signed 8-bit integer */
+	uint8_t Button; /**< Bit mask of the currently pressed joystick buttons */
+} USB_JoystickReport_Data_t;
 
 static uint8_t PrevJoystickHIDReportBuffer[sizeof(USB_JoystickReport_Data_t)];
 
@@ -45,6 +49,7 @@ void JS_StartOfFrame(void)
 
 bool printflag;
 
+#ifdef USB_JOY
 bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
                                          uint8_t* const ReportID,
                                          const uint8_t ReportType,
@@ -66,5 +71,6 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 	*ReportSize = sizeof(USB_JoystickReport_Data_t);
 	return false;
 }
+#endif
 
 #endif

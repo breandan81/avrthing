@@ -8,11 +8,12 @@
 	 *   Buttons: 2
 	 */
 
-#define JOYSTICK_REPORT(A, B, C, D, E, F) \
+#define JOYSTICK_REPORT(Axes, AxisMin, AxisMax, AxisPhysMin, AxisPhysMax, Buttons) \
 const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] = \
 { \
-	HID_DESCRIPTOR_JOYSTICK(A, B, C, D, E, F) \
+	HID_DESCRIPTOR_JOYSTICK(Axes, AxisMin, AxisMax, AxisPhysMin, AxisPhysMax, Buttons) \
 };
+
 #define JOYSTICK_REPORT_DEFAULT JOYSTICK_REPORT(2, -100, 100, -1, 1, 2)
 
 #define JOYSTICK_CONFIG \

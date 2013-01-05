@@ -44,6 +44,7 @@ void Mouse_StartOfFrame(void)
 	HID_Device_MillisecondElapsed(&Mouse_HID_Interface);
 }
 
+#ifdef USB_MOUSE
 bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
                                          uint8_t* const ReportID,
                                          const uint8_t ReportType,
@@ -54,6 +55,7 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 
 	MouseReport->Y = -1;
 	MouseReport->X = -1;
+	MouseReport->Button=0;
 
 	*ReportSize = sizeof(USB_MouseReport_Data_t);
 	return true;
@@ -62,4 +64,5 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 void Mouse_USBTask(void) {
 	HID_Device_USBTask(&Mouse_HID_Interface);
 }
+#endif
 #endif

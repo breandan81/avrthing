@@ -10,9 +10,15 @@
 #include "macros/MouseMacros.h"
 
 CONFIG_BEGIN
+#ifdef USB_CDC
 SERIAL_CONFIG
-//JOYSTICK_CONFIG
+#endif
+#ifdef USB_JOY
+JOYSTICK_CONFIG
+#endif
+#ifdef USB_MOUSE
 MOUSE_CONFIG
+#endif
 CONFIG_END
 
 uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,

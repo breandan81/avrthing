@@ -137,10 +137,10 @@ SRC = $(TARGET).c                                                 \
 	avrthing/USB/usb.c					\
 	avrthing/USB/usbMouse.c					\
 	avrthing/USB/usbSerial.c					\
+	avrthing/USB/usbJoy.c					\
 	avrthing/USB/Descriptors.c                                               \
 	$(LUFA_SRC_USB)                                             \
 	$(LUFA_SRC_USBCLASS)
-	# avrthing/USB/usbJoy.c					\
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
