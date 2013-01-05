@@ -1,6 +1,6 @@
 #include <avr/power.h>
+#include "avrthing.h"
 /*
-#include "USBMacros/timer.h"
 #include "USBMacros/usbJoy.h"
 #include "USBMacros/usbSerial.h"
 #include <LUFA/Drivers/USB/USB.h>

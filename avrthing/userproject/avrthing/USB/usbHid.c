@@ -1,5 +1,5 @@
 #include "usb.h"
-#include "timer.h"
+#include "../timer.h"
 #include <LUFA/Drivers/USB/USB.h>
 
 // Just a sketch, an idea...

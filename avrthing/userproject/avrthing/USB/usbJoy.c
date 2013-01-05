@@ -1,5 +1,5 @@
 #include "usbJoy.h"
-#include "timer.h"
+#include "../timer.h"
 #include <LUFA/Drivers/USB/USB.h>
 
 static uint8_t PrevJoystickHIDReportBuffer[sizeof(USB_JoystickReport_Data_t)];

@@ -1,4 +1,4 @@
-#include "../Descriptors.h"
+#include "Descriptors.h"
 
 void Mouse_ConfigChanged(void);
 void Mouse_ControlRequest(void);

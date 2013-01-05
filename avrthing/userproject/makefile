@@ -133,14 +133,14 @@ include $(LUFA_PATH)/LUFA/makefile
 
 # List C source files here. (C dependencies are automatically generated.)
 SRC = $(TARGET).c                                                 \
-	  USBMacros/usb.c					\
-	  USBMacros/timer.c					\
-	  USBMacros/usbJoy.c					\
-	  USBMacros/usbSerial.c					\
-	  Descriptors.c                                               \
+	  avrthing/timer.c					\
+	  avrthing/USB/usb.c					\
+	  avrthing/USB/usbJoy.c					\
+	  avrthing/USB/usbSerial.c					\
+	  avrthing/USB/Descriptors.c                                               \
 	  $(LUFA_SRC_USB)                                             \
 	  $(LUFA_SRC_USBCLASS)
-	  # USBMacros/usbMouse.c					\
+	  # avrthing/USB/usbMouse.c					\
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
