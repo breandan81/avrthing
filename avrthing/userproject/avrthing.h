@@ -3,18 +3,20 @@
 
 
 //C includes
-/*
+#ifdef __GNUG__
 extern "C" {
-#include "usbSerial.h"
-}
-*/
-//C++ includes
+#endif
+#include <avr/interrupt.h>
 #include "avrthing/timer.h"
 #include "avrthing/USB/Descriptors.h"
 #include "avrthing/USB/usb.h"
 //#include "avrthing/USB/usbJoy.h"
 #include "avrthing/USB/usbMouse.h"
 #include "avrthing/USB/usbSerial.h"
+#ifdef __GNUG__
+}
+#endif
+//C++ includes
 #include "avrthing/digitalIO.h"
 #include "avrthing/analogIO.h"
 #include "avrthing/pins/awesomedip.h"

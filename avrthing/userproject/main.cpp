@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
 {
@@ -12,7 +11,9 @@ void SetupHardware(void)
 	initUSBSerial();
 #endif
 	sei();
+#ifdef AVRTHING_USB
 	USB_Init();
+#endif
 }
 
 int main(void)
