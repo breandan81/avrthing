@@ -27,7 +27,9 @@ extern "C" {
 #define JOYSTICK_EPNUM                    1
 #define JOYSTICK_EPSIZE                   8
 
-#define MOUSE_EPNUM                    1
+#define MOUSE_EPNUM                    6
+#define MOUSE1_EPNUM                   1
+#define MOUSE2_EPNUM                   6
 #define MOUSE_EPSIZE                   8
 
 #define CDC_NOTIFICATION_EPNUM         2

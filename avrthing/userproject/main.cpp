@@ -16,7 +16,7 @@ void SetupHardware(void)
 	sei();
 
 #ifdef USB_MOUSE
-	usbMouse *mouse1 = new usbMouse(1);
+	usbMouse *mouse1 = new usbMouse();
 //	usbMouse *mouse2 = new usbMouse(6);
 	usbDevs[0]=mouse1;
 //	usbDevs[1]=*mouse2;
