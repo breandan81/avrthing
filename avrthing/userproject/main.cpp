@@ -1,5 +1,8 @@
 #include "main.h"
 
+usbDev** usbDevs = new usbDev*[1];
+usbMouse* mouse1 = new usbMouse(0);
+
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
 {
@@ -11,6 +14,14 @@ void SetupHardware(void)
 	initUSBSerial();
 #endif
 	sei();
+
+#ifdef USB_MOUSE
+	//usbMouse *mouse1 = new usbMouse(0);
+//	usbMouse *mouse2 = new usbMouse(6);
+//	usbDevs[0]=mouse1;
+//	usbDevs[1]=*mouse2;
+#endif
+
 #ifdef AVRTHING_USB
 	USB_Init();
 #endif

@@ -133,9 +133,6 @@ include $(LUFA_PATH)/LUFA/makefile
 
 # List C source files here. (C dependencies are automatically generated.)
 SRC = \
-	avrthing/timer.c		\
-	avrthing/USB/usb.c		\
-	avrthing/USB/usbMouse.c		\
 	avrthing/USB/usbSerial.c	\
 	avrthing/USB/usbJoy.c		\
 	avrthing/USB/Descriptors.c	\
@@ -146,6 +143,11 @@ SRC = \
 # List C++ source files here. (C dependencies are automatically generated.)
 CPPSRC = \
 	$(TARGET).cpp			\
+	avrthing/cpp.cpp		\
+	avrthing/timer.cpp		\
+	avrthing/USB/usb.cpp		\
+	avrthing/USB/usbDev.cpp		\
+	avrthing/USB/usbMouse.cpp	\
 	avrthing/analogIO.cpp		\
 	avrthing/digitalIO.cpp		\
 	avrthing/ringBuffer.cpp
@@ -642,7 +644,8 @@ extcoff: $(TARGET).elf
 %.elf: $(OBJ)
 	@echo
 	@echo $(MSG_LINKING) $@
-	$(CC) $(ALL_CFLAGS) $^ --output $@ $(LDFLAGS)
+	avr-g++ $(ALL_CFLAGS) $^ --output $@ $(LDFLAGS)
+#	$(CC) $(ALL_CFLAGS) $^ --output $@ $(LDFLAGS)
 
 
 # Compile: create object files from C source files.

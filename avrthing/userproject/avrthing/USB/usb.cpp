@@ -1,16 +1,21 @@
 #include "../../avrthing.h"
 #ifdef AVRTHING_USB
 
+usbDev::usbDev() {
+	
+}
+
 void runUSB(void)
 {
+	int len=sizeof(usbDevs)/sizeof(usbDev *);
+	for(int i=0;i<len;i++)
+		usbDevs[i]->USBTask();
+	mouse1->USBTask();
 #ifdef USB_CDC
 	Ser_USBTask();
 #endif
 #ifdef USB_JOY
 	JS_USBTask();
-#endif
-#ifdef USB_MOUSE
-	Mouse_USBTask();
 #endif
 	USB_USBTask();
 }
@@ -28,14 +33,15 @@ void EVENT_USB_Device_Disconnect(void)
 /** Event handler for the library USB Configuration Changed event. */
 void EVENT_USB_Device_ConfigurationChanged(void)
 {
+	int len=sizeof(usbDevs)/sizeof(usbDev *);
+	for(int i=0;i<len;i++)
+		usbDevs[i]->ConfigChanged();
+	mouse1->ConfigChanged();
 #ifdef USB_JOY
 	JS_ConfigChanged();
 #endif
 #ifdef USB_CDC
 	Ser_ConfigChanged();
-#endif
-#ifdef USB_MOUSE
-	Mouse_ConfigChanged();
 #endif
 	USB_Device_EnableSOFEvents();
 }
@@ -43,25 +49,27 @@ void EVENT_USB_Device_ConfigurationChanged(void)
 /** Event handler for the library USB Control Request reception event. */
 void EVENT_USB_Device_ControlRequest(void)
 {
+	int len=sizeof(usbDevs)/sizeof(usbDev *);
+	for(int i=0;i<len;i++)
+		usbDevs[i]->ControlRequest();
+	mouse1->ControlRequest();
 #ifdef USB_JOY
 	JS_ControlRequest();
 #endif
 #ifdef USB_CDC
 	Ser_ControlRequest();
 #endif
-#ifdef USB_MOUSE
-	Mouse_ControlRequest();
-#endif
 }
 
 /** Event handler for the USB device Start Of Frame event. */
 void EVENT_USB_Device_StartOfFrame(void)
 {
+	int len=sizeof(usbDevs)/sizeof(usbDev *);
+	for(int i=0;i<len;i++)
+		usbDevs[i]->StartOfFrame();
+	mouse1->StartOfFrame();
 #ifdef USB_JOY
 	JS_StartOfFrame();
-#endif
-#ifdef USB_MOUSE
-	Mouse_StartOfFrame();
 #endif
 }
 

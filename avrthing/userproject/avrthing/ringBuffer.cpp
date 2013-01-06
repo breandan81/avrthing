@@ -5,20 +5,6 @@
 #include <util/twi.h>
 #include "ringBuffer.h"
 
-
-void * operator new(size_t size);
-void operator delete(void * ptr); 
-
-void * operator new(size_t size)
-{
-  return malloc(size);
-}
-
-void operator delete(void * ptr)
-{
-  free(ptr);
-} 
-
 ringBuffer::ringBuffer(int len)
 {
 	bytes = 0;
