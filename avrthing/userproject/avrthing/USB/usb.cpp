@@ -10,7 +10,6 @@ void runUSB(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->USBTask();
-	mouse1->USBTask();
 #ifdef USB_CDC
 	Ser_USBTask();
 #endif
@@ -36,7 +35,6 @@ void EVENT_USB_Device_ConfigurationChanged(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->ConfigChanged();
-	mouse1->ConfigChanged();
 #ifdef USB_JOY
 	JS_ConfigChanged();
 #endif
@@ -52,7 +50,6 @@ void EVENT_USB_Device_ControlRequest(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->ControlRequest();
-	mouse1->ControlRequest();
 #ifdef USB_JOY
 	JS_ControlRequest();
 #endif
@@ -67,7 +64,6 @@ void EVENT_USB_Device_StartOfFrame(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->StartOfFrame();
-	mouse1->StartOfFrame();
 #ifdef USB_JOY
 	JS_StartOfFrame();
 #endif
