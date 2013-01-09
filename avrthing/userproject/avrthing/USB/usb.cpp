@@ -10,9 +10,6 @@ void runUSB(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->USBTask();
-#ifdef USB_JOY
-	JS_USBTask();
-#endif
 	USB_USBTask();
 }
 
@@ -32,9 +29,6 @@ void EVENT_USB_Device_ConfigurationChanged(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->ConfigChanged();
-#ifdef USB_JOY
-	JS_ConfigChanged();
-#endif
 	USB_Device_EnableSOFEvents();
 }
 
@@ -44,9 +38,6 @@ void EVENT_USB_Device_ControlRequest(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->ControlRequest();
-#ifdef USB_JOY
-	JS_ControlRequest();
-#endif
 }
 
 /** Event handler for the USB device Start Of Frame event. */
@@ -55,9 +46,6 @@ void EVENT_USB_Device_StartOfFrame(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->StartOfFrame();
-#ifdef USB_JOY
-	JS_StartOfFrame();
-#endif
 }
 
 /** HID class driver callback function for the processing of HID reports from the host.
