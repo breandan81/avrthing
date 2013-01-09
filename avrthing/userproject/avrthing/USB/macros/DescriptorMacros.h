@@ -139,7 +139,6 @@ const USB_Descriptor_String_t PROGMEM LanguageString = \
 
 #define LANG_DEFAULT LANGUAGE(LANGUAGE_ID_ENG, 1)
 
-
 #define MANUFACTURER(A, B) \
 const USB_Descriptor_String_t PROGMEM ManufacturerString = \
 { \

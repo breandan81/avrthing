@@ -10,9 +10,6 @@ void runUSB(void)
 	int len=sizeof(usbDevs)/sizeof(usbDev *);
 	for(int i=0;i<len;i++)
 		usbDevs[i]->USBTask();
-#ifdef USB_CDC
-	Ser_USBTask();
-#endif
 #ifdef USB_JOY
 	JS_USBTask();
 #endif
@@ -38,9 +35,6 @@ void EVENT_USB_Device_ConfigurationChanged(void)
 #ifdef USB_JOY
 	JS_ConfigChanged();
 #endif
-#ifdef USB_CDC
-	Ser_ConfigChanged();
-#endif
 	USB_Device_EnableSOFEvents();
 }
 
@@ -52,9 +46,6 @@ void EVENT_USB_Device_ControlRequest(void)
 		usbDevs[i]->ControlRequest();
 #ifdef USB_JOY
 	JS_ControlRequest();
-#endif
-#ifdef USB_CDC
-	Ser_ControlRequest();
 #endif
 }
 

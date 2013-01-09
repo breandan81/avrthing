@@ -133,7 +133,6 @@ include $(LUFA_PATH)/LUFA/makefile
 
 # List C source files here. (C dependencies are automatically generated.)
 SRC = \
-	avrthing/USB/usbSerial.c	\
 	avrthing/USB/usbJoy.c		\
 	avrthing/USB/Descriptors.c	\
 	$(LUFA_SRC_USB)			\
@@ -148,6 +147,7 @@ CPPSRC = \
 	avrthing/USB/usb.cpp		\
 	avrthing/USB/usbDev.cpp		\
 	avrthing/USB/usbMouse.cpp	\
+	avrthing/USB/usbSerial.cpp	\
 	avrthing/analogIO.cpp		\
 	avrthing/digitalIO.cpp		\
 	avrthing/ringBuffer.cpp

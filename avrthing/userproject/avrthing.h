@@ -10,7 +10,6 @@ extern "C" {
 #include "avrthing/timer.h"
 #include "avrthing/USB/Descriptors.h"
 //#include "avrthing/USB/usbJoy.h"
-#include "avrthing/USB/usbSerial.h"
 #ifdef __GNUG__
 }
 #endif
@@ -20,6 +19,7 @@ extern "C" {
 #include "avrthing/pins/awesomedip.h"
 #include "avrthing/USB/usb.h"
 #include "avrthing/USB/usbMouse.h"
+#include "avrthing/USB/usbSerial.h"
 
 //defines
 #define MHZ 16 // change this if you are using a different clockspeed, note USB needs an XTAL source of at least 8 MHZ to function
@@ -40,6 +40,5 @@ extern "C" {
 
 #ifdef __GNUG__
 extern usbDev **usbDevs;
-extern usbMouse *mouse1;
 #endif
 #endif
