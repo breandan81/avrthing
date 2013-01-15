@@ -11,15 +11,20 @@ void SetupHardware(void)
 	initRTC();
 	sei();
 
+#ifdef AVRTHING_USB
+#ifdef USB_JOY
+	usbJoy *joy = new usbJoy();
+	usbDevs[0]=joy;
+#endif
 #ifdef USB_MOUSE
-	usbMouse *mouse1 = new usbMouse();
+	usbMouse *mouse = new usbMouse();
+	usbDevs[0]=mouse;
+#endif
+#ifdef USB_CDC
 	usbSerial *serial = new usbSerial();
-	usbDevs[0]=mouse1;
 	usbDevs[1]=serial;
 	serial->initUSBSerial();
 #endif
-
-#ifdef AVRTHING_USB
 	USB_Init();
 #endif
 }
@@ -28,10 +33,14 @@ int main(void)
 {
 	SetupHardware();
 
+	char buf[10];
+	scanf("%s",buf);
+	printf("%d/%d = %d\r\n",sizeof(usbDevs),sizeof(usbDev *),sizeof(usbDevs)/sizeof(usbDev *));
+
 	for (;;)
 	{
-		if(millis()%1000<20)
-			printf("test %lu\r\n",millis());
+		printf("%d/%d = %d\r\n",sizeof(usbDevs),sizeof(usbDev *),sizeof(usbDevs)/sizeof(usbDev *));
+		printf("testoutput: %lu\t%s\r\n", millis(),buf);
 	}
 }
 

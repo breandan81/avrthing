@@ -32,6 +32,11 @@ void usbJoy::StartOfFrame(void)
 	HID_Device_MillisecondElapsed(&Joystick_HID_Interface);
 }
 
+uint8_t *usbJoy::getPrevReport(void)
+{
+	return PrevJoystickHIDReportBuffer;
+}
+
 extern "C" bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
 					uint8_t* const ReportID, const uint8_t ReportType,
 					void* ReportData, uint16_t* const ReportSize)
@@ -41,7 +46,9 @@ extern "C" bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* 
 	JoystickReport->Y =  (millis()/10) % 200 - 100;
 	JoystickReport->X =  (millis()/10) % 200 - 100;
 	JoystickReport->Button = 0;
+//	printf("test: %d\r\n",millis());
+
 	*ReportSize = sizeof(USB_JoystickReport_Data_t);
-	return false;
+	return true;
 }
 #endif

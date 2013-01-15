@@ -1,7 +1,7 @@
 #include "../../avrthing.h"
 //#include "usbSerial.h"
 
-#ifdef AVRTHING_USB
+#ifdef USB_CDC
 
 static FILE USBSerialStream;
 
@@ -44,10 +44,12 @@ void usbSerial::ControlRequest(void)
 	CDC_Device_ProcessControlRequest(&VirtualSerial_CDC_Interface);
 }
 
-void usbSerial::StartOfFrame(void) {
+void usbSerial::StartOfFrame(void)
+{
 }
 
-void usbSerial::USBTask(void) {
+void usbSerial::USBTask(void)
+{
 	CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
 	CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 }

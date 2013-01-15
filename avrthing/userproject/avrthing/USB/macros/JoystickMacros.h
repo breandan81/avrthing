@@ -26,7 +26,7 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] = \
 	{ \
 		.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface}, \
  \
-		.InterfaceNumber        = 0x00, \
+		.InterfaceNumber        = 0x02, \
 		.AlternateSetting       = 0x00, \
  \
 		.TotalEndpoints         = 1, \

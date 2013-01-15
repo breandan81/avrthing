@@ -2,7 +2,6 @@
 #ifdef AVRTHING_USB
 
 usbDev::usbDev() {
-	
 }
 
 void runUSB(void)
@@ -56,7 +55,7 @@ void EVENT_USB_Device_StartOfFrame(void)
  *  \param[in] ReportData  Pointer to a buffer where the received report has been stored
  *  \param[in] ReportSize  Size in bytes of the received HID report
  */
-void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
+extern "C" void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
                                           const uint8_t ReportID,
                                           const uint8_t ReportType,
                                           const void* ReportData,

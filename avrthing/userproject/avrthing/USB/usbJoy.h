@@ -23,5 +23,6 @@ class usbJoy: public usbDev {
 	bool CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
 				uint8_t* const ReportID, const uint8_t ReportType,
 				void* ReportData, uint16_t* const ReportSize);
+	uint8_t *getPrevReport(void);
 };
 #endif
