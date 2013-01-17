@@ -80,14 +80,14 @@ flip-ee: $(TARGET).eep $(MAKEFILE_LIST)
 	
 dfu: $(TARGET).hex $(MAKEFILE_LIST)
 	@echo $(MSG_DFU_CMD) Programming FLASH with dfu-programmer using \"$<\"
-	dfu-programmer $(MCU) erase
-	dfu-programmer $(MCU) flash $<
-	dfu-programmer $(MCU) reset
+	-dfu-programmer $(MCU) erase
+	-dfu-programmer $(MCU) flash $<
+	-dfu-programmer $(MCU) reset
 
 dfu-ee: $(TARGET).eep $(MAKEFILE_LIST)
 	@echo $(MSG_DFU_CMD) Programming EEPROM with dfu-programmer using \"$<\"
-	dfu-programmer $(MCU) eeprom-flash $<
-	dfu-programmer $(MCU) reset
+	-dfu-programmer $(MCU) eeprom-flash $<
+	-dfu-programmer $(MCU) reset
 	
 # Phony build targets for this module
 .PHONY: flip flip-ee dfu dfu-ee

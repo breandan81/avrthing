@@ -13,10 +13,7 @@ int main(void)
 	for (;;)
 	{
 		CheckJoystickMovement();
-
-		/* Must throw away unused bytes from the host, or it will lock up while waiting for the device */
 //		runUSB();
-//		USB_USBTask();
 	}
 }
 
