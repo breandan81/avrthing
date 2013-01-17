@@ -6,13 +6,17 @@
 int main(void)
 {
 	SetupHardware();
+	initRTC();
 
 	sei();
 
 	for (;;)
 	{
 		CheckJoystickMovement();
-		runUSB();
+
+		/* Must throw away unused bytes from the host, or it will lock up while waiting for the device */
+//		runUSB();
+//		USB_USBTask();
 	}
 }
 
